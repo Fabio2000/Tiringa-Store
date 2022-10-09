@@ -8,9 +8,9 @@ export default async function handler(req,res){
         const user = await User.create(req.body);
         res.redirect('/')
         if(!user){
-            return res.json({"code":'User not created'})
+            return res.json({"code":'Usuário não criado'})
         }
     } catch (error) {
-        res.status(400).json({status:'Not able to create a new user.'})
+        res.status(400).json({status:'Não é capaz de criar um novo usuário'})
     }
 }

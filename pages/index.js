@@ -1,12 +1,13 @@
 import styles from '../style/styles.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Container, Row, Col, Card, CardBody, Form, Label, Input, CardText } from 'reactstrap';
-
+import Image from 'next/image'
+import tiringalogin from '../public/imagens/Tiringa.png';
 
 
 export default function Home() {
   return (
-    <Row className={styles.principal}>
+    <Row className={styles.boxDegrade}>
       <Col class="col-sm-6">
         <Container className={styles.CardOne}>
           <h1>Registre-se</h1>
@@ -30,6 +31,7 @@ export default function Home() {
               </Form>
           </Container>
         </Col>
+        <Image src={tiringalogin} width={200} height={200} placeholder="blur" class='tiringalogin'/>
     </Row>
   )
 }
