@@ -6,15 +6,10 @@ const userSchema = new mongoose.Schema({
         required:true,
         unique:true
     },
-    name:{
-        type:String,
-        required:true,
-        unique:true
-    },
     password:{
         type:String,
         required:true
     }
 })
 
-module.exports = mongoose.models.User || mongoose.model('User',userSchema)
+module.exports = mongoose.models.email || mongoose.model('email',userSchema)

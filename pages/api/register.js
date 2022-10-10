@@ -1,11 +1,11 @@
 import connect from "../../lib/mongodb";
-import User from '../../model/schema'
+import email from '../../model/schema'
 
 connect()
 
 export default async function handler(req,res){
     try {
-        const user = await User.create(req.body);
+        const user = await email.create(req.body);
         res.redirect('/')
         if(!user){
             return res.json({"code":'Usuário não criado'})
