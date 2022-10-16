@@ -15,7 +15,7 @@ export default function Home() {
             <Input type='email' name='email' placeholder='Escreva seu e-mail'></Input><br /><br />
             <Input type='text' name='text' placeholder='Digite seu nome'></Input><br /><br />
             <Input type='password' name='password' placeholder='Digite sua senha'></Input><br /><br />
-            <Button type='submit' className={styles.btnUm}>Registrar</Button>
+            <Button type='submit' color='success' className={styles.btnUm}>Registrar</Button>
           </Form>
         </Container>
 
