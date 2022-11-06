@@ -58,9 +58,9 @@ export default function () {
                                 </Form>
                             </div>
                         </Container>
-                        <Col className='col-7' style={{ textAlignLast:'end'}}>
+                        <Col className='col-7' style={{ textAlignLast: 'end' }}>
                             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                                <DropdownToggle  style={{backgroundColor:'transparent', borderColor:'transparent'}} ><Image src={person} width={50} height={50} /></DropdownToggle>
+                                <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
                                 <DropdownMenu>
                                     <DropdownItem href='/perfil'>Perfil</DropdownItem>
                                     <DropdownItem href='/carinho'>Carinho</DropdownItem>
@@ -71,43 +71,6 @@ export default function () {
                     </Col>
                 </div>
             </Nav>
-            <div>
-                <Carousel className={styles.corousel}>
-                    <div>
-                        <Image src={bemvindo} width={990} height={250} alt="imagem1" />
-
-                    </div>
-
-                    <div>
-                        <Image src={promo} width={990} height={300} alt="imagem2" />
-
-                    </div>
-
-                    <div>
-                        <Image src={inaugura} width={990} height={250} alt="imagem3" />
-
-                    </div>
-
-                </Carousel>
-            </div>
-            <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
-                <Col sm="3">
-                    <Card body>
-                        <Image src={feminino} width={90} height={190} />
-                        <h4>Acesse a área Feminina</h4>
-                        <CardText>Visite nossa área excluisiva para Mulheres empoderadas.</CardText>
-                        <Button class="btn btn-success" href="/feminino">Visite já</Button>
-                    </Card>
-                </Col>
-                <Col sm="3">
-                    <Card body>
-                        <Image src={masculino} width={90} height={190} />
-                        <h4>Acesse a área Maculina</h4>
-                        <CardText>Visite nossa área excluisiva para Homens fortes como o tiringa.</CardText>
-                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
-                    </Card>
-                </Col>
-            </div>
-        </Col >
+        </Col>
     )
 }
