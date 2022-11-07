@@ -8,10 +8,20 @@ import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.svg';
 import promo from '../public/imagens/promocao.png'
-import bemvindo from '../public/imagens/bemvindo.jpg'
+import descontos from '../public/imagens/descontos.jpeg'
 import inaugura from '../public/imagens/inaugura.jpeg'
 import feminino from '../public/imagens/feminino.jpeg'
 import masculino from '../public/imagens/masculino.jpeg'
+import roupa from '../public/imagens/homemTiringa.jpg'
+import roupaDois from '../public/imagens/homemTiringa2.jpeg'
+import terno from '../public/imagens/terno.jpg'
+import femin1 from '../public/imagens/femininoTiringa.png'
+
+import dolar from '../public/imagens/icones/dollar.svg'
+
+import femin2 from '../public/imagens/fTiringa.png'
+import femin3 from '../public/imagens/fTiringa1.PNG'
+
 import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
 import { disconnect, version } from 'mongoose';
 
@@ -34,13 +44,13 @@ export default function () {
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Pagina inicial</a>
+                                        <a class="nav-link" href="/home">Pagina inicial</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Produtos</a>
+                                        <a class="nav-link" href="/produtos">Produtos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Criadores</a>
+                                        <a class="nav-link" href="/criadores">Criadores</a>
                                     </li>
                                 </ul>
                             </Col>
@@ -71,6 +81,92 @@ export default function () {
                     </Col>
                 </div>
             </Nav>
+            <div>
+                <Carousel className={styles.corousel}>
+                    <div>
+                        <Image src={descontos} width={990} height={250} alt="imagem1" />
+
+                    </div>
+
+                    <div>
+                        <Image src={promo} width={990} height={300} alt="imagem2" />
+
+                    </div>
+
+                    <div>
+                        <Image src={inaugura} width={990} height={250} alt="imagem3" />
+
+                    </div>
+
+                </Carousel>
+            </div>
+            <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
+                <Col sm="3">
+                    <Card body>
+                        <Image src={roupa} width={420} height={390} />
+                        <br/>
+                        <h5>Camiseta Unisex Tiringa Oficial</h5>
+                        <br/>
+                        <CardText>Camiseta Unisex com diferentes tamanhos e diferentes cores para gostos de ambos genêros.</CardText>
+                        <Button class="btn btn-success" href="/feminino" src={dolar}>Visite já</Button>
+                    </Card>
+                </Col>
+                <Col sm="3">
+                    <Card body>
+                        <Image src={roupaDois} width={420} height={413} />
+                        <br/>
+                        <h4>Camiseta masculina tiringa</h4>
+                        <br/>
+                        <CardText>Compre agora a camiseta social que o tiringa usa diáriamente em sua fazenda.</CardText>
+                        <Button class="btn btn-success" href="/feminino">Visite já</Button>
+                    </Card>
+                </Col>
+                <Col sm="3">
+                    <Card body>
+                        <Image src={terno} width={420} height={413} />
+                        <br/>
+                        <h4>Terno completo estilo tiringa</h4>
+                        <br/>
+                        <CardText>Compromisso importante? Escolha já nosso lindo terno tiringa.</CardText>
+                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
+                    </Card>
+                </Col>
+            </div>
+            <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
+
+            <Col sm="3">
+                    <Card body>
+                        <Image src={femin1} width={500} height={490} />
+                        <br/>
+                        <h4>Promoção Feminina</h4>
+                        <CardText>Conjunto lançamento tiringa Store só para mulheres, body e calça.</CardText>
+                        <br/>
+                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
+                    </Card>
+                </Col>
+                
+                <Col sm="3">
+                    <Card body>
+                        <Image src={femin2} width={500} height={430} />
+                        <br/>
+                        <h4>Body´s Feminino multiplas cores</h4>
+                        <CardText>Body femino com diferentes tamanhos e diferentes cores, na compra de dois 50% de desconto o segundo.</CardText>
+                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
+                    </Card>
+                </Col>
+                
+                <Col sm="3">
+                    <Card body>
+                        <Image src={femin3} width={500} height={490} />
+                        <br/>
+                        <h4>Macaquinho multiplas cores</h4>
+                        <br/>
+                        <CardText>Macaquinho feminino Tamanho único, 12 peças variadas.</CardText>
+                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
+                    </Card>
+                </Col>
+            </div>
+
         </Col>
     )
 }

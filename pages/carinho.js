@@ -34,13 +34,13 @@ export default function () {
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Pagina inicial</a>
+                                        <a class="nav-link" href="/home">Pagina inicial</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Produtos</a>
+                                        <a class="nav-link" href="/produtos">Produtos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Criadores</a>
+                                        <a class="nav-link" href="/criadores">Criadores</a>
                                     </li>
                                 </ul>
                             </Col>
