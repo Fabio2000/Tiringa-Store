@@ -28,7 +28,7 @@ export default function () {
     const [dropdownOpen, setDropdownOpen] = React.useState(false);
     const toggle = () => setDropdownOpen(prevState => !prevState);
     return (
-        <Col className={styles.body}>
+        <Col className={styles.teste}>
             <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
                 <div id="informa" className={styles.informa}>
                     <div>
@@ -104,7 +104,7 @@ export default function () {
                         <br />
                         <h4>Camiseta masculina tiringa</h4>
                         <CardText>Compre agora a camiseta social que o tiringa usa diáriamente em sua fazenda.</CardText>
-                        <Button class="btn btn-warning" href="/item" onClick={handleShow}>R$ 59,99</Button>
+                        <Button class="btn btn-warning" variant="img01" onClick={handleShow}>R$ 59,99</Button>
                     </Card>
                 </Col>
 
@@ -114,7 +114,7 @@ export default function () {
                         <br />
                         <h4>Camiseta Unisex Tiringa Oficial</h4>
                         <CardText>Camiseta Unisex com diferentes tamanhos e diferentes cores para gostos de ambos genêros.</CardText>
-                        <Button class="btn btn-warning" href="/item2">R$ 19,99</Button>
+                        <Button class="btn btn-warning">R$ 19,99</Button>
                     </Card>
                 </Col>
 
@@ -125,7 +125,7 @@ export default function () {
                         <h4>Terno completo estilo tiringa</h4>
                         <br />
                         <CardText>Compromisso importante? Escolha já nosso lindo terno tiringa.</CardText>
-                        <Button class="btn btn-warning" href="/item3">R$ 39,99</Button>
+                        <Button class="btn btn-warning">R$ 39,99</Button>
                     </Card>
                 </Col>
             </div>

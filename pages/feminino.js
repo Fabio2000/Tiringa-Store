@@ -25,7 +25,7 @@ export default function () {
     const [modalOpen, setModalOpen ] = React.useState(false)
 
     return (
-        <Col className={styles.body}>
+        <Col className={styles.teste}>
             <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
                 <div id="informa" className={styles.informa}>
                     <div>
