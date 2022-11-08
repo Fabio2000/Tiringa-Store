@@ -23,7 +23,7 @@ export default function () {
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
     return (
-        <Col className={styles.teste}>
+        <Col className={styles.body}>
             <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
                 <div id="informa" className={styles.informa}>
                     <div>
