@@ -8,7 +8,7 @@ import tiringalogin from '../public/imagens/Tiringa.png';
 export default function Home() {
   return (
     <body className={styles.body}>
-    <Card className={styles.Card}>
+    <Card className={styles.Card} style={{backgroundColor:'transparent', border:'0'}}>
     <Row className={styles.boxDegrade}>
       <Col class="col-sm-4">
         <Container className={styles.CardOne}>
