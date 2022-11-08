@@ -23,7 +23,7 @@ export default function () {
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
     return (
-        <Col className={styles.teste}>
+        <Col className={styles.body}>
             <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
                 <div id="informa" className={styles.informa}>
                     <div>
@@ -93,7 +93,7 @@ export default function () {
             <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
                 <Col sm="3">
                     <Card body>
-                        <Image src={feminino} width={90} height={190} />
+                        <Image src={feminino} width={190} height={290} />
                         <h4>Acesse a área Feminina</h4>
                         <CardText>Visite nossa área excluisiva para Mulheres empoderadas.</CardText>
                         <Button class="btn btn-success" href="/feminino">Visite já</Button>
@@ -101,7 +101,7 @@ export default function () {
                 </Col>
                 <Col sm="3">
                     <Card body>
-                        <Image src={masculino} width={90} height={190} />
+                        <Image src={masculino} width={190} height={290} />
                         <h4>Acesse a área Maculina</h4>
                         <CardText>Visite nossa área excluisiva para Homens fortes como o tiringa.</CardText>
                         <Button class="btn btn-success" href="/masculino">Visite já</Button>

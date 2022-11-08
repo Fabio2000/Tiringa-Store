@@ -1,9 +1,9 @@
 import styles from '../style/styles.module.css'
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Modal, Col, Card, Form, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
+import {  Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav,  Col, Card, Form, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.svg';
@@ -15,7 +15,16 @@ import masc from '../public/imagens/masculina/ternoUm.jpg'
 import mascOne from '../public/imagens/masculina/socialUm.jpeg'
 import mascTwo from '../public/imagens/masculina/unisexUm.jpg'
 
+
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 export default function () {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
     const [dropdownOpen, setDropdownOpen] = React.useState(false);
     const toggle = () => setDropdownOpen(prevState => !prevState);
     return (
@@ -95,7 +104,7 @@ export default function () {
                         <br />
                         <h4>Camiseta masculina tiringa</h4>
                         <CardText>Compre agora a camiseta social que o tiringa usa diáriamente em sua fazenda.</CardText>
-                        <Button class="btn btn-warning" href="/item">R$ 59,99</Button>
+                        <Button class="btn btn-warning" href="/item" onClick={handleShow}>R$ 59,99</Button>
                     </Card>
                 </Col>
 
@@ -120,6 +129,27 @@ export default function () {
                     </Card>
                 </Col>
             </div>
-        </Col>
+
+            <Button variant="primary" onClick={handleShow}>
+                Launch demo modal
+            </Button>
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        
+
+        </Col >
     )
 }

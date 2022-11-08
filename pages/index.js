@@ -7,6 +7,8 @@ import tiringalogin from '../public/imagens/Tiringa.png';
 
 export default function Home() {
   return (
+    <body className={styles.body}>
+    <Card className={styles.Card}>
     <Row className={styles.boxDegrade}>
       <Col class="col-sm-4">
         <Container className={styles.CardOne}>
@@ -22,7 +24,7 @@ export default function Home() {
       </Col>
         <Col class="col-sm-4">
           <Container className={styles.CardTwo}>
-                <h1 >Login</h1>
+                <h1 id="sai" >Login</h1>
               <Form action="/api/login" method="post">
                 <Input type='email' name='email' placeholder='Digite seu e-mail'></Input><br /><br />
                 <Input type='password' name='password' placeholder='Digite sua senha'></Input><br /><br />
@@ -30,7 +32,9 @@ export default function Home() {
               </Form>
           </Container>
         </Col>
-        <Image src={tiringalogin} width={200} height={200} placeholder="blur" class='tiringalogin'/>
+            <Image src={tiringalogin} width={200} class='tiringalogin'/>
     </Row>
+    </Card>
+    </body>
   )
 }
