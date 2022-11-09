@@ -87,33 +87,33 @@ export default function () {
             </Nav>
 
             <div>
-                <Carousel fade className={styles.corousel} style={{textAlignLast:'center', marginBottom:'100px'}}>
-                    <Carousel.Item>
-                    <Image
-                        src={mas}
-                        width={990}
-                        height={250}
-                        className="d-block w-100"
-                        alt="First slide"
-                    />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <Image 
-                        src={promo} 
-                        width={990} 
-                        height={300} 
-                        className="d-block w-100"
-                        alt="Two slide"
+                <Carousel fade className={styles.corousel} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={mas}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="First slide"
                         />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                        <Image 
-                        src={inaugura} 
-                        width={990} 
-                        height={250} 
-                        className="d-block w-100"
-                        alt="First slide"
-                         />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={promo}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="Two slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={inaugura}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="First slide"
+                        />
                     </Carousel.Item>
                 </Carousel>
             </div>
@@ -170,7 +170,45 @@ export default function () {
                         <Row>
                             <Col>
                                 <div>
-                                    <Image src={socialUm} width={990} height={250} alt="imagem3" />
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                width={720}
+                                                height={580}
+                                                src={masc}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTwo}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTree}
+                                                alt="First slide"
+                                                width={720}
+                                                height={580}
+                                            />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                        </Col>
+                                    </Col>
                                 </div>
                             </Col>
                         </Row>
@@ -194,7 +232,45 @@ export default function () {
                         <Row>
                             <Col>
                                 <div>
-                                    <Image src={camisaTwo} width={990} height={250} alt="imagem2" />
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                width={720}
+                                                height={580}
+                                                src={masc}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTwo}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTree}
+                                                alt="First slide"
+                                                width={720}
+                                                height={580}
+                                            />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                        </Col>
+                                    </Col>
                                 </div>
                             </Col>
                         </Row>
@@ -218,55 +294,51 @@ export default function () {
                         <Row>
                             <Col>
                                 <div>
-                                    <Image src={ternoOne} width={424} height={290} alt="imagem3" />
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                width={720}
+                                                height={580}
+                                                src={masc}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTwo}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTree}
+                                                alt="First slide"
+                                                width={720}
+                                                height={580}
+                                            />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                        </Col>
+                                    </Col>
                                 </div>
                             </Col>
                         </Row>
                     </Container>
                 </Modal.Body>
             </Modal>
-
-
-            <Carousel fade>
-                <Carousel.Item>
-                    <Image
-                        className="d-block w-100"
-                        src={ternoOne}
-                        alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Image
-                        className="d-block w-100"
-                        src={ternoTree}
-                        alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Image
-                        className="d-block w-100"
-                        src={ternoTwo}
-                        alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
-
         </Col >
     )
 }

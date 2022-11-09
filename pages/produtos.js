@@ -68,36 +68,35 @@ export default function () {
                     </Dropdown>
                 </Col>
             </Nav>
-            <Carousel fade className={styles.descontos} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
-                <Carousel.Item>
-                    <Image
-                        src={descontos}
-                        width={990}
-                        height={250}
-                        className="d-block w-100"
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Image
-                        src={promo}
-                        width={990}
-                        height={300}
-                        className="d-block w-100"
-                        alt="Two slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <Image
-                        src={inaugura}
-                        width={990}
-                        height={250}
-                        className="d-block w-100"
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-            </Carousel>
-            <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
+            <Carousel fade className={styles.corousel} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={descontos}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={promo}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="Two slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={inaugura}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
+                </Carousel>           <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
                 <Col sm="3">
                     <Card body>
                         <Image src={roupa} width={420} height={390} />

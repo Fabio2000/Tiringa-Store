@@ -1,21 +1,15 @@
 import styles from '../style/styles.module.css'
 import React, { Component } from 'react';
+import Head from 'next/head'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Card, Form, Input, CardText, CardTitle, Container } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Container, Form } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
-import promo from '../public/imagens/promocao.png'
-import bemvindo from '../public/imagens/bemvindo.jpg'
-import inaugura from '../public/imagens/inaugura.jpeg'
-import feminino from '../public/imagens/feminino.jpeg'
-import masculino from '../public/imagens/masculino.jpeg'
-import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
-import { disconnect, version } from 'mongoose';
 
-
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 export default function () {
     const [dropdownOpen, setDropdownOpen] = React.useState(false);
@@ -23,8 +17,8 @@ export default function () {
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
     return (
-        <Col className={styles.teste}>
-            <Nav className="navbar navbar-expand navbar-dark bg-dark col-12"style={{marginBottom:'50px'}}>
+        <div className={styles.body}>
+            <Nav className="navbar navbar-expand navbar-dark bg-dark col-12" style={{ marginBottom: '50px' }}>
                 <div id="informa" className={styles.informa}>
                     <div>
                         <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
@@ -58,6 +52,106 @@ export default function () {
                     </Dropdown>
                 </Col>
             </Nav>
-        </Col>
+            <Container>
+                <Row>
+                    <Col>
+                        <Card style={{ marginBottom: '50px' }}>
+                            <Card.Header as="h5" style={{ textAlign: 'center' }}>Pedido #00001</Card.Header>
+                            <Card.Body>
+                                <Card.Title>Item Roupa #Item01</Card.Title>
+                                <br />
+                                <Container>
+                                    <Row>
+                                        <Col style={{ display: 'flex' }}>
+                                            <Image src={cearense}
+                                                width={280}
+                                                height={200}
+                                            ></Image>
+                                            <Col style={{ display: 'flex' }}>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Preço: </h4><h6> ####</h6>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Tamanho: </h4><h6> ####</h6>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Cor: </h4><h6> ####</h6><br />
+
+                                            </Col>
+                                            <Card border="light" style={{ width: '18rem' }}>
+                                                <Card.Header>Descrição do Item/Pedio</Card.Header>
+                                                <Card.Body>
+                                                    <Card.Title>Item Roupa #Item01</Card.Title>
+                                                    <Card.Text>
+                                                        Descrição da roupa #Item01, informação vinda do banco.
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ marginBottom: '50px' }}>
+                            <Card.Header as="h5" style={{ textAlign: 'center' }}>Pedido #00002</Card.Header>
+                            <Card.Body>
+                                <Card.Title>Item Roupa #Item02</Card.Title>
+                                <br />
+                                <Container>
+                                    <Row>
+                                        <Col style={{ display: 'flex' }}>
+                                            <Image src={cearense}
+                                                width={280}
+                                                height={200}
+                                            ></Image>
+                                            <Col style={{ display: 'flex' }}>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Preço: </h4><h6> ####</h6>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Tamanho: </h4><h6> ####</h6>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Cor: </h4><h6> ####</h6>
+                                            </Col>
+                                        </Col>
+                                        <Card border="light" style={{ width: '18rem' }}>
+                                                <Card.Header>Descrição do Item/Pedio</Card.Header>
+                                                <Card.Body>
+                                                    <Card.Title>Item Roupa #Item02</Card.Title>
+                                                    <Card.Text>
+                                                        Descrição da roupa #Item02, informação vinda do banco.
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Card>
+                                    </Row>
+                                </Container>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ marginBottom: '50px' }}>
+                            <Card.Header as="h5" style={{ textAlign: 'center' }}>Pedido #00003</Card.Header>
+                            <Card.Body>
+                                <Card.Title>Item Roupa #Item03</Card.Title>
+                                <br />
+                                <Container>
+                                    <Row>
+                                        <Col style={{ display: 'flex' }}>
+                                            <Image src={cearense}
+                                                width={280}
+                                                height={200}
+                                            ></Image>
+                                            <Col style={{ display: 'flex' }}>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Preço: </h4><h6> ####</h6>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Tamanho: </h4><h6> ####</h6>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Cor: </h4><h6> ####</h6>
+                                            </Col>
+                                            <Card border="light" style={{ width: '18rem' }}>
+                                                <Card.Header>Descrição do Item/Pedio</Card.Header>
+                                                <Card.Body>
+                                                    <Card.Title>Item Roupa #Item03</Card.Title>
+                                                    <Card.Text>
+                                                        Descrição da roupa #Item03, informação vinda do banco.
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Card>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     )
 }

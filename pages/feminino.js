@@ -1,15 +1,40 @@
 import styles from '../style/styles.module.css'
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from 'react-bootstrap/Carousel';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Modal, Col, Card, Form, Input, CardText, CardTitle, Container } from 'reactstrap';
+import { Dropdown, DropdownToggle, Form, DropdownMenu, DropdownItem, Nav, Col, Card, Row, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
 import promo from '../public/imagens/promocao.png'
-import bemvindo from '../public/imagens/bemvindo.jpg'
 import inaugura from '../public/imagens/inaugura.jpeg'
+import mas from '../public/imagens/masculina/mas.png'
+import masc from '../public/imagens/masculina/ternoUm.jpg'
+import mascOne from '../public/imagens/masculina/socialUm.jpeg'
+
+
+// Fotos
+import camisaOne from '../public/imagens/masculina/camisaOne.png'
+import camisaTwo from '../public/imagens/masculina/camisaTwo.jpg'
+import camisaTree from '../public/imagens/masculina/camisaTree.png'
+
+import socialUm from '../public/imagens/masculina/socialUm.jpeg'
+import socialTwo from '../public/imagens/masculina/socialTwo.png'
+import socialTree from '../public/imagens/masculina/socialTree.png'
+
+import ternoOne from '../public/imagens/masculina/ternoOne.png'
+import ternoTwo from '../public/imagens/masculina/ternoTwo.png'
+import ternoTree from '../public/imagens/masculina/ternoTree.png'
+
+
+
+
+
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 import fem from '../public/imagens/feminina/fem.png'
 
 import femin1 from '../public/imagens/femininoTiringa.png'
@@ -20,9 +45,11 @@ import femin3 from '../public/imagens/fTiringa1.PNG'
 export default function () {
     const [dropdownOpen, setDropdownOpen] = React.useState(false);
 
-    const toggle = () => setDropdownOpen(prevState => !prevState);
+    const [oneShow, setoneShow] = useState(false);
+    const [twoShow, settwoShow] = useState(false);
+    const [treeShow, settreeShow] = useState(false);
 
-    const [modalOpen, setModalOpen] = React.useState(false)
+    const toggle = () => setDropdownOpen(prevState => !prevState);
 
     return (
         <Col className={styles.teste}>
@@ -32,7 +59,7 @@ export default function () {
                         <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
                     </div>
                     <Col className="collapse navbar-collapse">
-                        <Container className='col-6'>
+                        <Container className='col-12'>
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
@@ -47,35 +74,23 @@ export default function () {
                                 </ul>
                             </Col>
                         </Container>
-                        <Container className='col-6'>
-                            <div id="botao" className={styles.botao}>
-                                <Form className="form-inline">
-                                    <ul class="navbar-nav mr-auto">
-                                        <Input className="form-control"
-                                            type="search" placeholder="Procure seu produto" />
-                                        <li className={styles.procura} class="nav-item">
-                                            <button class="btn btn-outline-info" type="submit">Procurar</button>
-                                        </li>
-                                    </ul>
-                                </Form>
-                            </div>
-                        </Container>
-                        <Col className='col-7' style={{ textAlignLast: 'end' }}>
-                            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                                <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem href='/perfil'>Perfil</DropdownItem>
-                                    <DropdownItem href='/carinho'>Carinho</DropdownItem>
-                                    <DropdownItem href='/historico'>Histórico</DropdownItem>
-                                </DropdownMenu>
-                            </Dropdown>
-                        </Col>
                     </Col>
                 </div>
+                <Col style={{ textAlign: 'end' }}>
+                    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                        <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem href='/login'>Login</DropdownItem>
+                            <DropdownItem href='/perfil'>Perfil</DropdownItem>
+                            <DropdownItem href='/carinho'>Carinho</DropdownItem>
+                            <DropdownItem href='/historico'>Histórico</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+                </Col>
             </Nav>
-            
+
             <Carousel fade className={styles.corousel} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
-                <Carousel.Item>
+                <Carousel.Item interval={1000}>
                     <Image
                         src={fem}
                         width={990}
@@ -84,16 +99,16 @@ export default function () {
                         alt="First slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={1000}>
                     <Image
                         src={promo}
                         width={990}
-                        height={300}
+                        height={250}
                         className="d-block w-100"
                         alt="Two slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={1000}>
                     <Image
                         src={inaugura}
                         width={990}
@@ -103,41 +118,226 @@ export default function () {
                     />
                 </Carousel.Item>
             </Carousel>
-
             <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
 
                 <Col sm="3">
                     <Card body>
-                        <Image src={femin1} />
+                        <Image src={femin1} height={650} />
                         <br />
                         <h4>Promoção Feminina</h4>
                         <CardText>Conjunto lançamento tiringa Store só para mulheres, body e calça.</CardText>
-                        <br />
-                        <Button class="btn btn-warning" href="/item">R$ 79,99</Button>
+                        <Button class="btn btn-warning" onClick={() => setoneShow(true)}>R$ 59,99</Button>
                     </Card>
                 </Col>
 
                 <Col sm="3">
                     <Card body>
-                        <Image src={femin2} />
+                        <Image src={femin2} height={650} />
                         <br />
                         <h4>Body´s Feminino multiplas cores</h4>
                         <CardText>Body femino com diferentes tamanhos e diferentes cores, na compra de dois 50% de desconto o segundo.</CardText>
-                        <Button class="btn btn-warning" href="/item2">R$ 19,99</Button>
+                        <Button class="btn btn-warning" onClick={() => settwoShow(true)}>R$ 39,90</Button>
                     </Card>
                 </Col>
 
                 <Col sm="3">
                     <Card body>
-                        <Image src={femin3} />
+                        <Image src={femin3} height={799} />
                         <br />
                         <h4>Macaquinho multiplas cores</h4>
                         <br />
                         <CardText>Macaquinho feminino Tamanho único, 12 peças variadas.</CardText>
-                        <Button class="btn btn-warning">R$ 39,99</Button>
+                        <Button class="btn btn-warning" onClick={() => settreeShow(true)}>R$ 359,90</Button>
                     </Card>
                 </Col>
             </div>
+
+            <Modal
+                size="lg"
+                show={oneShow}
+                onHide={() => setoneShow(false)}
+                aria-labelledby="example-modal-sizes-title-sm"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-modal-sizes-title-sm" style={{ marginLeft: 'auto' }}>
+                        Camiseta masculina tiringa
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div>
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                width={720}
+                                                height={580}
+                                                src={masc}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTwo}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTree}
+                                                alt="First slide"
+                                                width={720}
+                                                height={580}
+                                            />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                        </Col>
+                                    </Col>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal.Body>
+            </Modal>
+            <Modal
+                size="lg"
+                show={twoShow}
+                onHide={() => settwoShow(false)}
+                aria-labelledby="example-modal-sizes-title-lg"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-modal-sizes-title-lg" style={{ marginLeft: 'auto' }}>
+                        Camiseta Unisex Tiringa Oficial
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div>
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                width={720}
+                                                height={580}
+                                                src={masc}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTwo}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTree}
+                                                alt="First slide"
+                                                width={720}
+                                                height={580}
+                                            />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                        </Col>
+                                    </Col>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal.Body>
+            </Modal>
+            <Modal
+                size="lg"
+                show={treeShow}
+                onHide={() => settreeShow(false)}
+                aria-labelledby="example-modal-sizes-title-lg"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-modal-sizes-title-lg" style={{ marginLeft: 'auto' }}>
+                        Terno completo estilo tiringa
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div>
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                width={720}
+                                                height={580}
+                                                src={masc}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTwo}
+                                                alt="First slide" />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={ternoTree}
+                                                alt="First slide"
+                                                width={720}
+                                                height={580}
+                                            />
+                                            <Carousel.Caption>
+                                                <h3>Teste</h3>
+                                                <p>Teste.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                        </Col>
+                                    </Col>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal.Body>
+            </Modal>
 
         </Col>
     )
