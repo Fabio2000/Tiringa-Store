@@ -25,39 +25,52 @@ export default function () {
   return (
     <Col className={styles.teste}>
       <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
-        <div id="informa" className={styles.informa}>
-          <div>
-            <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
-          </div>
-          <Col className="collapse navbar-collapse">
-            <Container className='col-12'>
-              <Col className="">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/home">Pagina inicial</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/produtos">Produtos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/criadores">Criadores</a>
-                  </li>
-                </ul>
-              </Col>
-            </Container>
-          </Col>
-        </div>
-        <Col style={{ textAlign: 'end' }}>
-          <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-            <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem href='/perfil'>Perfil</DropdownItem>
-              <DropdownItem href='/carinho'>Carinho</DropdownItem>
-              <DropdownItem href='/historico'>Histórico</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </Col>
-      </Nav>
+                <div id="informa" className={styles.informa}>
+                    <div>
+                        <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
+                    </div>
+                    <Col className="collapse navbar-collapse">
+                        <Container className='col-6'>
+                            <Col className="">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/home">Pagina inicial</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/produtos">Produtos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/criadores">Criadores</a>
+                                    </li>
+                                </ul>
+                            </Col>
+                        </Container>
+                        <Container className='col-6'>
+                            <div id="botao" className={styles.botao}>
+                                <Form className="form-inline">
+                                    <ul class="navbar-nav mr-auto">
+                                        <Input className="form-control"
+                                            type="search" placeholder="Procure seu produto" />
+                                        <li className={styles.procura} class="nav-item">
+                                            <button class="btn btn-outline-info" type="submit">Procurar</button>
+                                        </li>
+                                    </ul>
+                                </Form>
+                            </div>
+                        </Container>
+                        <Col className='col-7' style={{ textAlignLast:'end'}}>
+                            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                                <DropdownToggle  style={{backgroundColor:'transparent', borderColor:'transparent'}} ><Image src={person} width={50} height={50} /></DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem href='/perfil'>Perfil</DropdownItem>
+                                    <DropdownItem href='/carinho'>Carinho</DropdownItem>
+                                    <DropdownItem href='/historico'>Histórico</DropdownItem>
+                                </DropdownMenu>
+                            </Dropdown>
+                        </Col>
+                    </Col>
+                </div>
+            </Nav>
       <form
         className="mx-auto max-w-screen-md">
         <h1 className="mb-4 text-xl">Atualize o perfil</h1>

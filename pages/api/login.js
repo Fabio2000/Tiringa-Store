@@ -8,10 +8,8 @@ export default async function handler(req,res){
     const {email,password}=req.body
     const user = await User.findOne({email,password})
     if(!user){
-        // return res.json({status:'Usuário não encontrado, favor, registrar-se'})
-
-        alert("oi")
-    }
+         return res.json({status:'Usuário não encontrado, favor, registrar-se'})
+        }
     else{
         res.redirect('/home')
     }

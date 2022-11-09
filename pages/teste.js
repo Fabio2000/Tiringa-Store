@@ -13,6 +13,7 @@ import mas from '../public/imagens/masculina/mas.png'
 import masc from '../public/imagens/masculina/ternoUm.jpg'
 import mascOne from '../public/imagens/masculina/socialUm.jpeg'
 
+
 // Fotos
 import camisaOne from '../public/imagens/masculina/camisaOne.png'
 import camisaTwo from '../public/imagens/masculina/camisaTwo.jpg'
@@ -39,6 +40,8 @@ export default function () {
     const [twoShow, settwoShow] = useState(false);
     const [treeShow, settreeShow] = useState(false);
 
+    
+
 
     const [dropdownOpen, setDropdownOpen] = React.useState(false);
     const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -53,7 +56,7 @@ export default function () {
                         <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
                     </div>
                     <Col className="collapse navbar-collapse">
-                        <Container className='col-6'>
+                        <Container className='col-12'>
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
@@ -68,31 +71,18 @@ export default function () {
                                 </ul>
                             </Col>
                         </Container>
-                        <Container className='col-6'>
-                            <div id="botao" className={styles.botao}>
-                                <Form className="form-inline">
-                                    <ul class="navbar-nav mr-auto">
-                                        <Input className="form-control"
-                                            type="search" placeholder="Procure seu produto" />
-                                        <li className={styles.procura} class="nav-item">
-                                            <button class="btn btn-outline-info" type="submit">Procurar</button>
-                                        </li>
-                                    </ul>
-                                </Form>
-                            </div>
-                        </Container>
-                        <Col className='col-7' style={{ textAlignLast:'end'}}>
-                            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                                <DropdownToggle  style={{backgroundColor:'transparent', borderColor:'transparent'}} ><Image src={person} width={50} height={50} /></DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem href='/perfil'>Perfil</DropdownItem>
-                                    <DropdownItem href='/carinho'>Carinho</DropdownItem>
-                                    <DropdownItem href='/historico'>Histórico</DropdownItem>
-                                </DropdownMenu>
-                            </Dropdown>
-                        </Col>
                     </Col>
                 </div>
+                <Col style={{ textAlign: 'end' }}>
+                    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                        <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem href='/perfil'>Perfil</DropdownItem>
+                            <DropdownItem href='/carinho'>Carinho</DropdownItem>
+                            <DropdownItem href='/historico'>Histórico</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+                </Col>
             </Nav>
 
             <div>
