@@ -1,7 +1,7 @@
 import styles from '../style/styles.module.css'
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Modal, Col, Card, Form, Input, CardText, CardTitle, Container } from 'reactstrap';
 import Image from 'next/image'
@@ -26,7 +26,7 @@ export default function () {
 
     return (
         <Col className={styles.teste}>
-           <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
+            <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
                 <div id="informa" className={styles.informa}>
                     <div>
                         <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
@@ -60,9 +60,9 @@ export default function () {
                                 </Form>
                             </div>
                         </Container>
-                        <Col className='col-7' style={{ textAlignLast:'end'}}>
+                        <Col className='col-7' style={{ textAlignLast: 'end' }}>
                             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                                <DropdownToggle  style={{backgroundColor:'transparent', borderColor:'transparent'}} ><Image src={person} width={50} height={50} /></DropdownToggle>
+                                <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
                                 <DropdownMenu>
                                     <DropdownItem href='/perfil'>Perfil</DropdownItem>
                                     <DropdownItem href='/carinho'>Carinho</DropdownItem>
@@ -73,25 +73,37 @@ export default function () {
                     </Col>
                 </div>
             </Nav>
-            <div>
-                <Carousel className={styles.corousel}>
-                    <div>
-                        <Image src={fem} width={990} height={250} alt="imagem1" />
+            
+            <Carousel fade className={styles.corousel} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
+                <Carousel.Item>
+                    <Image
+                        src={fem}
+                        width={990}
+                        height={250}
+                        className="d-block w-100"
+                        alt="First slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <Image
+                        src={promo}
+                        width={990}
+                        height={300}
+                        className="d-block w-100"
+                        alt="Two slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <Image
+                        src={inaugura}
+                        width={990}
+                        height={250}
+                        className="d-block w-100"
+                        alt="First slide"
+                    />
+                </Carousel.Item>
+            </Carousel>
 
-                    </div>
-
-                    <div>
-                        <Image src={promo} width={990} height={300} alt="imagem2" />
-
-                    </div>
-
-                    <div>
-                        <Image src={inaugura} width={990} height={250} alt="imagem3" />
-
-                    </div>
-
-                </Carousel>
-            </div>
             <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
 
                 <Col sm="3">

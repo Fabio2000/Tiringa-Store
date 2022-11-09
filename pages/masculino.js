@@ -1,7 +1,8 @@
 import styles from '../style/styles.module.css'
 import React, { Component, useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-bootstrap/Carousel';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, Row, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
 import Image from 'next/image'
@@ -12,6 +13,7 @@ import inaugura from '../public/imagens/inaugura.jpeg'
 import mas from '../public/imagens/masculina/mas.png'
 import masc from '../public/imagens/masculina/ternoUm.jpg'
 import mascOne from '../public/imagens/masculina/socialUm.jpeg'
+
 
 // Fotos
 import camisaOne from '../public/imagens/masculina/camisaOne.png'
@@ -40,6 +42,8 @@ export default function () {
     const [treeShow, settreeShow] = useState(false);
 
 
+
+
     const [dropdownOpen, setDropdownOpen] = React.useState(false);
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
@@ -53,7 +57,7 @@ export default function () {
                         <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
                     </div>
                     <Col className="collapse navbar-collapse">
-                        <Container className='col-6'>
+                        <Container className='col-12'>
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
@@ -68,50 +72,49 @@ export default function () {
                                 </ul>
                             </Col>
                         </Container>
-                        <Container className='col-6'>
-                            <div id="botao" className={styles.botao}>
-                                <Form className="form-inline">
-                                    <ul class="navbar-nav mr-auto">
-                                        <Input className="form-control"
-                                            type="search" placeholder="Procure seu produto" />
-                                        <li className={styles.procura} class="nav-item">
-                                            <button class="btn btn-outline-info" type="submit">Procurar</button>
-                                        </li>
-                                    </ul>
-                                </Form>
-                            </div>
-                        </Container>
-                        <Col className='col-7' style={{ textAlignLast:'end'}}>
-                            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                                <DropdownToggle  style={{backgroundColor:'transparent', borderColor:'transparent'}} ><Image src={person} width={50} height={50} /></DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem href='/perfil'>Perfil</DropdownItem>
-                                    <DropdownItem href='/carinho'>Carinho</DropdownItem>
-                                    <DropdownItem href='/historico'>Histórico</DropdownItem>
-                                </DropdownMenu>
-                            </Dropdown>
-                        </Col>
                     </Col>
                 </div>
+                <Col style={{ textAlign: 'end' }}>
+                    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                        <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem href='/perfil'>Perfil</DropdownItem>
+                            <DropdownItem href='/carinho'>Carinho</DropdownItem>
+                            <DropdownItem href='/historico'>Histórico</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+                </Col>
             </Nav>
 
             <div>
-                <Carousel className={styles.corousel}>
-                    <div>
-                        <Image src={mas} width={990} height={250} alt="imagem1" />
-
-                    </div>
-
-                    <div>
-                        <Image src={promo} width={990} height={300} alt="imagem2" />
-
-                    </div>
-
-                    <div>
-                        <Image src={inaugura} width={990} height={250} alt="imagem3" />
-
-                    </div>
-
+                <Carousel fade className={styles.corousel} style={{textAlignLast:'center', marginBottom:'100px'}}>
+                    <Carousel.Item>
+                    <Image
+                        src={mas}
+                        width={990}
+                        height={250}
+                        className="d-block w-100"
+                        alt="First slide"
+                    />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <Image 
+                        src={promo} 
+                        width={990} 
+                        height={300} 
+                        className="d-block w-100"
+                        alt="Two slide"
+                        />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                        <Image 
+                        src={inaugura} 
+                        width={990} 
+                        height={250} 
+                        className="d-block w-100"
+                        alt="First slide"
+                         />
+                    </Carousel.Item>
                 </Carousel>
             </div>
             <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
@@ -187,7 +190,7 @@ export default function () {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <Container>
+                    <Container>
                         <Row>
                             <Col>
                                 <div>
@@ -211,7 +214,7 @@ export default function () {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <Container>
+                    <Container>
                         <Row>
                             <Col>
                                 <div>
@@ -224,7 +227,45 @@ export default function () {
             </Modal>
 
 
+            <Carousel fade>
+                <Carousel.Item>
+                    <Image
+                        className="d-block w-100"
+                        src={ternoOne}
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <Image
+                        className="d-block w-100"
+                        src={ternoTree}
+                        alt="Second slide"
+                    />
 
+                    <Carousel.Caption>
+                        <h3>Second slide label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <Image
+                        className="d-block w-100"
+                        src={ternoTwo}
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>Third slide label</h3>
+                        <p>
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        </p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
 
         </Col >
     )
