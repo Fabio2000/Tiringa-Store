@@ -3,10 +3,10 @@ import React, { Component, useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {  Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav,  Col, Card, Form, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, Form, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
-import person from '../public/imagens/person.svg';
+import person from '../public/imagens/person.png';
 import promo from '../public/imagens/promocao.png'
 import inaugura from '../public/imagens/inaugura.jpeg'
 
@@ -35,7 +35,7 @@ export default function () {
                         <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
                     </div>
                     <Col className="collapse navbar-collapse">
-                        <Container className='col-6'>
+                        <Container className='col-12'>
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
@@ -50,31 +50,18 @@ export default function () {
                                 </ul>
                             </Col>
                         </Container>
-                        <Container className='col-6'>
-                            <div id="botao" className={styles.botao}>
-                                <Form className="form-inline">
-                                    <ul class="navbar-nav mr-auto">
-                                        <Input className="form-control"
-                                            type="search" placeholder="Procure seu produto" />
-                                        <li className={styles.procura} class="nav-item">
-                                            <button class="btn btn-outline-info" type="submit">Procurar</button>
-                                        </li>
-                                    </ul>
-                                </Form>
-                            </div>
-                        </Container>
-                        <Col className='col-7' style={{ textAlignLast: 'end' }}>
-                            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                                <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
-                                <DropdownMenu>
-                                    <DropdownItem href='/perfil'>Perfil</DropdownItem>
-                                    <DropdownItem href='/carinho'>Carinho</DropdownItem>
-                                    <DropdownItem href='/historico'>Histórico</DropdownItem>
-                                </DropdownMenu>
-                            </Dropdown>
-                        </Col>
                     </Col>
                 </div>
+                <Col style={{ textAlign: 'end' }}>
+                    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                        <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem href='/perfil'>Perfil</DropdownItem>
+                            <DropdownItem href='/carinho'>Carinho</DropdownItem>
+                            <DropdownItem href='/historico'>Histórico</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
+                </Col>
             </Nav>
 
             <div>
@@ -148,7 +135,7 @@ export default function () {
                     </Button>
                 </Modal.Footer>
             </Modal>
-        
+
 
         </Col >
     )

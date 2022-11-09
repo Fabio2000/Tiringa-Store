@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Card, Form, Input, CardText, CardTitle, Container } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
-import person from '../public/imagens/person.svg';
+import person from '../public/imagens/person.png';
 import promo from '../public/imagens/promocao.png'
 import bemvindo from '../public/imagens/bemvindo.jpg'
 import inaugura from '../public/imagens/inaugura.jpeg'
