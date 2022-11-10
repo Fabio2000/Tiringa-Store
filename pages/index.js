@@ -1,32 +1,40 @@
 import styles from '../style/styles.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Card, Form, Input, CardText, CardTitle, Container } from 'reactstrap';
-import Image from 'next/image'
-import tiringalogin from '../public/imagens/Tiringa.png';
-import cearense from '../public/imagens/cearense.png';
 import React, { Component } from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, Input, CardText, Container } from 'reactstrap';
+import Image from 'next/image'
+import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
+import promo from '../public/imagens/promocao.png'
+import bemvindo from '../public/imagens/bemvindo.jpg'
+import inaugura from '../public/imagens/inaugura.jpeg'
+import feminino from '../public/imagens/feminino.jpeg'
+import masculino from '../public/imagens/masculino.jpeg'
+import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
+import { disconnect, version } from 'mongoose';
 
 
-export default function Home() {
 
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
+export default function () {
+    const [dropdownOpen, setDropdownOpen] = React.useState(false);
 
-  const toggle = () => setDropdownOpen(prevState => !prevState);
+    const toggle = () => setDropdownOpen(prevState => !prevState);
 
-  return (
-    <body className={styles.body}>
-      <Nav className="navbar navbar-expand navbar-dark bg-dark col-12"style={{marginBottom:'50px'}}>
+    return (
+        <Col className={styles.teste}>
+            <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
                 <div id="informa" className={styles.informa}>
                     <div>
-                        <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
+                        <a className="navbar-brand" href="/"><Image src={cearense} width={60} height={60} /></a>
                     </div>
                     <Col className="collapse navbar-collapse">
                         <Container className='col-12'>
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/home">Pagina inicial</a>
+                                        <a class="nav-link" href="/">Pagina inicial</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/produtos">Produtos</a>
@@ -50,34 +58,53 @@ export default function Home() {
                     </Dropdown>
                 </Col>
             </Nav>
-
-      <Card className={styles.Card} style={{ backgroundColor: 'transparent', border: '0' }}>
-        <Row className={styles.boxDegrade}>
-          <Col class="col-sm-4">
-            <Container className={styles.CardOne}>
-              <h1>Registre-se</h1>
-              <Form action="/api/register" method="post">
-                <Input type='email' name='email' placeholder='Escreva seu e-mail'></Input><br /><br />
-                <Input type='text' name='text' placeholder='Digite seu nome'></Input><br /><br />
-                <Input type='password' name='password' placeholder='Digite sua senha'></Input><br /><br />
-                <Button type='submit' color='success' className={styles.btnUm}>Registrar</Button>
-              </Form>
-            </Container>
-
-          </Col>
-          <Col class="col-sm-4">
-            <Container className={styles.CardTwo}>
-              <h1 id="sai" >Login</h1>
-              <Form action="/api/login" method="post">
-                <Input type='email' name='email' placeholder='Digite seu e-mail'></Input><br /><br />
-                <Input type='password' name='password' placeholder='Digite sua senha'></Input><br /><br />
-                <Button type='submit' color='success' size='md' className={styles.btnDois}>ENTRAR</Button>
-              </Form>
-            </Container>
-          </Col>
-          <Image src={tiringalogin} width={200} class='tiringalogin' />
-        </Row>
-      </Card>
-    </body>
-  )
+            <Carousel fade className={styles.corousel} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={bemvindo}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={promo}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="Two slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000}>
+                        <Image
+                            src={inaugura}
+                            width={990}
+                            height={250}
+                            className="d-block w-100"
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
+                </Carousel>
+            <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
+                <Col sm="3">
+                    <Card body>
+                        <Image src={feminino} width={190} height={290} />
+                        <h4>Acesse a área Feminina</h4>
+                        <CardText>Visite nossa área excluisiva para Mulheres empoderadas.</CardText>
+                        <Button class="btn btn-success" href="/feminino">Visite já</Button>
+                    </Card>
+                </Col>
+                <Col sm="3">
+                    <Card body>
+                        <Image src={masculino} width={190} height={290} />
+                        <h4>Acesse a área Maculina</h4>
+                        <CardText>Visite nossa área excluisiva para Homens fortes como o tiringa.</CardText>
+                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
+                    </Card>
+                </Col>
+            </div>
+        </Col >
+    )
 }

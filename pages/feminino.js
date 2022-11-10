@@ -16,17 +16,17 @@ import mascOne from '../public/imagens/masculina/socialUm.jpeg'
 
 
 // Fotos
-import camisaOne from '../public/imagens/masculina/camisaOne.png'
-import camisaTwo from '../public/imagens/masculina/camisaTwo.jpg'
-import camisaTree from '../public/imagens/masculina/camisaTree.png'
+import femOne from '../public/imagens/feminina/amarelo.png'
+import femTwo from '../public/imagens/feminina/laranja.png'
+import femTree from '../public/imagens/feminina/preto.png'
 
-import socialUm from '../public/imagens/masculina/socialUm.jpeg'
-import socialTwo from '../public/imagens/masculina/socialTwo.png'
-import socialTree from '../public/imagens/masculina/socialTree.png'
+import shortsUm from '../public/imagens/feminina/escuro.png'
+import shortsTwo from '../public/imagens/feminina/pretoj.png'
+import shortsTree from '../public/imagens/feminina/jeans.png'
 
-import ternoOne from '../public/imagens/masculina/ternoOne.png'
-import ternoTwo from '../public/imagens/masculina/ternoTwo.png'
-import ternoTree from '../public/imagens/masculina/ternoTree.png'
+import jeansOne from '../public/imagens/feminina/unisexUm.jpg'
+import jeansTwo from '../public/imagens/feminina/unisexDois.png'
+import jeansTree from '../public/imagens/feminina/unisexTres.png'
 
 
 
@@ -45,9 +45,9 @@ import femin3 from '../public/imagens/fTiringa1.PNG'
 export default function () {
     const [dropdownOpen, setDropdownOpen] = React.useState(false);
 
-    const [oneShow, setoneShow] = useState(false);
-    const [twoShow, settwoShow] = useState(false);
-    const [treeShow, settreeShow] = useState(false);
+    const [umShow, setumShow] = useState(false);
+    const [doisShow, setdoisShow] = useState(false);
+    const [tresShow, settresShow] = useState(false);
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
@@ -56,14 +56,14 @@ export default function () {
             <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
                 <div id="informa" className={styles.informa}>
                     <div>
-                        <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
+                        <a className="navbar-brand" href="/"><Image src={cearense} width={60} height={60} /></a>
                     </div>
                     <Col className="collapse navbar-collapse">
                         <Container className='col-12'>
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/home">Pagina inicial</a>
+                                        <a class="nav-link" href="/">Pagina inicial</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/produtos">Produtos</a>
@@ -126,7 +126,7 @@ export default function () {
                         <br />
                         <h4>Promoção Feminina</h4>
                         <CardText>Conjunto lançamento tiringa Store só para mulheres, body e calça.</CardText>
-                        <Button class="btn btn-warning" onClick={() => setoneShow(true)}>R$ 59,99</Button>
+                        <Button class="btn btn-warning" onClick={() => setumShow(true)}>R$ 59,99</Button>
                     </Card>
                 </Col>
 
@@ -136,7 +136,7 @@ export default function () {
                         <br />
                         <h4>Body´s Feminino multiplas cores</h4>
                         <CardText>Body femino com diferentes tamanhos e diferentes cores, na compra de dois 50% de desconto o segundo.</CardText>
-                        <Button class="btn btn-warning" onClick={() => settwoShow(true)}>R$ 39,90</Button>
+                        <Button class="btn btn-warning" onClick={() => setdoisShow(true)}>R$ 39,90</Button>
                     </Card>
                 </Col>
 
@@ -147,15 +147,15 @@ export default function () {
                         <h4>Macaquinho multiplas cores</h4>
                         <br />
                         <CardText>Macaquinho feminino Tamanho único, 12 peças variadas.</CardText>
-                        <Button class="btn btn-warning" onClick={() => settreeShow(true)}>R$ 359,90</Button>
+                        <Button class="btn btn-warning" onClick={() => settresShow(true)}>R$ 359,90</Button>
                     </Card>
                 </Col>
             </div>
 
             <Modal
                 size="lg"
-                show={oneShow}
-                onHide={() => setoneShow(false)}
+                show={umShow}
+                onHide={() => setumShow(false)}
                 aria-labelledby="example-modal-sizes-title-sm"
                 centered
             >
@@ -172,9 +172,9 @@ export default function () {
                                     <Carousel fade className={styles.modalCel}>
                                         <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
                                             <Image className="d-block w-100"
-                                                width={720}
-                                                height={580}
-                                                src={masc}
+                                                width={420}
+                                                height={280}
+                                                src={femOne}
                                                 alt="First slide" />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>
@@ -183,7 +183,7 @@ export default function () {
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTwo}
+                                                src={femTwo}
                                                 alt="First slide" />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>
@@ -192,10 +192,10 @@ export default function () {
                                         </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTree}
+                                                src={femTree}
                                                 alt="First slide"
-                                                width={720}
-                                                height={580}
+                                                width={420}
+                                                height={280}
                                             />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>
@@ -216,8 +216,8 @@ export default function () {
             </Modal>
             <Modal
                 size="lg"
-                show={twoShow}
-                onHide={() => settwoShow(false)}
+                show={doisShow}
+                onHide={() => setdoisShow(false)}
                 aria-labelledby="example-modal-sizes-title-lg"
                 centered
             >
@@ -234,9 +234,9 @@ export default function () {
                                     <Carousel fade className={styles.modalCel}>
                                         <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
                                             <Image className="d-block w-100"
-                                                width={720}
-                                                height={580}
-                                                src={masc}
+                                                width={420}
+                                                height={280}
+                                                src={shortsUm}
                                                 alt="First slide" />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>
@@ -245,7 +245,7 @@ export default function () {
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTwo}
+                                                src={shortsTwo}
                                                 alt="First slide" />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>
@@ -254,10 +254,10 @@ export default function () {
                                         </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTree}
+                                                src={shortsTree}
                                                 alt="First slide"
-                                                width={720}
-                                                height={580}
+                                                width={420}
+                                                height={280}
                                             />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>
@@ -278,8 +278,8 @@ export default function () {
             </Modal>
             <Modal
                 size="lg"
-                show={treeShow}
-                onHide={() => settreeShow(false)}
+                show={tresShow}
+                onHide={() => settresShow(false)}
                 aria-labelledby="example-modal-sizes-title-lg"
                 centered
             >
@@ -296,9 +296,9 @@ export default function () {
                                     <Carousel fade className={styles.modalCel}>
                                         <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
                                             <Image className="d-block w-100"
-                                                width={720}
-                                                height={580}
-                                                src={masc}
+                                                width={420}
+                                                height={280}
+                                                src={jeansOne}
                                                 alt="First slide" />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>
@@ -307,7 +307,7 @@ export default function () {
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTwo}
+                                                src={jeansTwo}
                                                 alt="First slide" />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>
@@ -316,10 +316,10 @@ export default function () {
                                         </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTree}
+                                                src={jeansTree}
                                                 alt="First slide"
-                                                width={720}
-                                                height={580}
+                                                width={420}
+                                                height={280}
                                             />
                                             <Carousel.Caption>
                                                 <h3>Teste</h3>

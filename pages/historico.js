@@ -21,14 +21,14 @@ export default function () {
             <Nav className="navbar navbar-expand navbar-dark bg-dark col-12" style={{ marginBottom: '50px' }}>
                 <div id="informa" className={styles.informa}>
                     <div>
-                        <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
+                        <a className="navbar-brand" href="/"><Image src={cearense} width={60} height={60} /></a>
                     </div>
                     <Col className="collapse navbar-collapse">
                         <Container className='col-12'>
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/home">Pagina inicial</a>
+                                        <a class="nav-link" href="/">Pagina inicial</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/produtos">Produtos</a>

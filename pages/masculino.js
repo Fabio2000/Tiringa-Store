@@ -25,7 +25,7 @@ import socialTwo from '../public/imagens/masculina/socialTwo.png'
 import socialTree from '../public/imagens/masculina/socialTree.png'
 
 import ternoOne from '../public/imagens/masculina/ternoOne.png'
-import ternoTwo from '../public/imagens/masculina/ternoTwo.png'
+import ternoTwo from '../public/imagens/masculina/ternoTwo.PNG'
 import ternoTree from '../public/imagens/masculina/ternoTree.png'
 
 
@@ -54,14 +54,14 @@ export default function () {
             <Nav className="navbar navbar-expand navbar-dark bg-dark col-12">
                 <div id="informa" className={styles.informa}>
                     <div>
-                        <a className="navbar-brand" href="home"><Image src={cearense} width={60} height={60} /></a>
+                        <a className="navbar-brand" href="/"><Image src={cearense} width={60} height={60} /></a>
                     </div>
                     <Col className="collapse navbar-collapse">
                         <Container className='col-12'>
                             <Col className="">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/home">Pagina inicial</a>
+                                        <a class="nav-link" href="/">Pagina inicial</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="/produtos">Produtos</a>
@@ -131,7 +131,7 @@ export default function () {
 
                 <Col sm="3">
                     <Card body>
-                        <Image src={camisaOne} />
+                        <Image src={camisaTwo} />
                         <br />
                         <h4>Camiseta Unisex Tiringa Oficial</h4>
                         <CardText>Camiseta Unisex com diferentes tamanhos e diferentes cores para gostos de ambos genêros.</CardText>
@@ -173,36 +173,28 @@ export default function () {
                                     <Carousel fade className={styles.modalCel}>
                                         <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
                                             <Image className="d-block w-100"
-                                                width={720}
-                                                height={580}
-                                                src={masc}
+                                                width={420}
+                                                height={350}
+                                                src={socialUm}
                                                 alt="First slide" />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
+                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTwo}
-                                                alt="First slide" />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
+                                                src={socialTwo}
+                                                alt="First slide"
+                                                width={420}
+                                                height={350}
+                                            />
+                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTree}
+                                                src={socialTree}
                                                 alt="First slide"
-                                                width={720}
-                                                height={580}
+                                                width={420}
+                                                height={350}
                                             />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
+                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
                                     </Carousel>
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
                                         <Col body>
@@ -235,40 +227,32 @@ export default function () {
                                     <Carousel fade className={styles.modalCel}>
                                         <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
                                             <Image className="d-block w-100"
-                                                width={720}
-                                                height={580}
-                                                src={masc}
+                                                width={420}
+                                                height={350}
+                                                src={camisaOne}
                                                 alt="First slide" />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTwo}
-                                                alt="First slide" />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
+                                                src={camisaTwo}
+                                                alt="First slide"
+                                                width={420}
+                                                height={350}
+                                            />
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
-                                                src={ternoTree}
+                                                src={camisaTree}
                                                 alt="First slide"
-                                                width={720}
-                                                height={580}
+                                                width={420}
+                                                height={350}
                                             />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
                                     </Carousel>
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
                                         <Col body>
-                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                            <Button class="btn btn-warning" href='/carinho'>R$39,90</Button>
                                         </Col>
                                     </Col>
                                 </div>
@@ -297,35 +281,29 @@ export default function () {
                                     <Carousel fade className={styles.modalCel}>
                                         <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
                                             <Image className="d-block w-100"
-                                                width={720}
-                                                height={580}
+                                                width={420}
+                                                height={350}
                                                 src={masc}
                                                 alt="First slide" />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
+                                            <h5>Compromisso importante? Escolha já <br /> nosso lindo terno tiringa.</h5>
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
                                                 src={ternoTwo}
-                                                alt="First slide" />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
+                                                alt="First slide"
+                                                width={420}
+                                                height={350}
+                                            />
+                                            <h5>Compromisso importante? Escolha já <br /> nosso lindo terno tiringa.</h5>
                                         </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
                                                 src={ternoTree}
                                                 alt="First slide"
-                                                width={720}
-                                                height={580}
+                                                width={420}
+                                                height={350}
                                             />
-                                            <Carousel.Caption>
-                                                <h3>Teste</h3>
-                                                <p>Teste.</p>
-                                            </Carousel.Caption>
+                                            <h5>Compromisso importante? Escolha já <br /> nosso lindo terno tiringa.</h5>
                                         </Carousel.Item>
                                     </Carousel>
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
@@ -339,6 +317,7 @@ export default function () {
                     </Container>
                 </Modal.Body>
             </Modal>
+            
         </Col >
     )
 }
