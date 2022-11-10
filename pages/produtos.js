@@ -1,27 +1,4 @@
-import styles from '../style/styles.module.css'
-import React, { useState } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Card, Form, Input, CardText, CardTitle, Container } from 'reactstrap';
-import Image from 'next/image'
-import cearense from '../public/imagens/cearense.png';
-import person from '../public/imagens/person.png';
-import promo from '../public/imagens/promocao.png'
-import descontos from '../public/imagens/descontos.jpeg'
-import inaugura from '../public/imagens/inaugura.jpeg'
-import feminino from '../public/imagens/feminino.jpeg'
-import masculino from '../public/imagens/masculino.jpeg'
-import roupa from '../public/imagens/homemTiringa.jpg'
-import roupaDois from '../public/imagens/homemTiringa2.jpeg'
-import terno from '../public/imagens/terno.jpg'
-import femin1 from '../public/imagens/femininoTiringa.png'
-import mascOne from '../public/imagens/masculina/socialUm.jpeg'
-import masc from '../public/imagens/masculina/ternoUm.jpg'
-
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-// Fotos
+// Fotos Masculinas
 import camisaOne from '../public/imagens/masculina/camisaOne.png'
 import camisaTwo from '../public/imagens/masculina/camisaTwo.jpg'
 import camisaTree from '../public/imagens/masculina/camisaTree.png'
@@ -30,22 +7,54 @@ import socialUm from '../public/imagens/masculina/socialUm.jpeg'
 import socialTwo from '../public/imagens/masculina/socialTwo.png'
 import socialTree from '../public/imagens/masculina/socialTree.png'
 
-import ternoOne from '../public/imagens/masculina/ternoOne.png'
 import ternoTwo from '../public/imagens/masculina/ternoTwo.PNG'
 import ternoTree from '../public/imagens/masculina/ternoTree.png'
 
-import dolar from '../public/imagens/icones/dollar.svg'
+//Fotos Femininas
+import femOne from '../public/imagens/feminina/amarelo.png'
+import femTwo from '../public/imagens/feminina/laranja.png'
+import femTree from '../public/imagens/feminina/preto.png'
 
+import shortsUm from '../public/imagens/feminina/escuro.png'
+import shortsTwo from '../public/imagens/feminina/pretoj.png'
+import shortsTree from '../public/imagens/feminina/jeans.png'
+
+import jeansOne from '../public/imagens/feminina/unisexUm.jpg'
+import jeansTwo from '../public/imagens/feminina/unisexDois.png'
+import jeansTree from '../public/imagens/feminina/unisexTres.png'
 import femin2 from '../public/imagens/fTiringa.png'
-import femin3 from '../public/imagens/fTiringa1.PNG'
 
-import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
-import { disconnect, version } from 'mongoose';
 
+//Importes
+import styles from '../style/styles.module.css'
+import React, { Component, useState } from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, Row, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
+import Image from 'next/image'
+import cearense from '../public/imagens/cearense.png';
+import person from '../public/imagens/person.png';
+import promo from '../public/imagens/promocao.png'
+import inaugura from '../public/imagens/inaugura.jpeg'
+import masc from '../public/imagens/masculina/ternoUm.jpg'
+import mascOne from '../public/imagens/masculina/socialUm.jpeg'
+
+
+import descontos from '../public/imagens/descontos.jpeg'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 
 export default function () {
     const [dropdownOpen, setDropdownOpen] = React.useState(false);
+
+    //Feminino
+    const [umShow, setumShow] = useState(false);
+    const [doisShow, setdoisShow] = useState(false);
+    const [tresShow, settresShow] = useState(false);
+
+    //masculino
     const [oneShow, setoneShow] = useState(false);
     const [twoShow, settwoShow] = useState(false);
     const [treeShow, settreeShow] = useState(false);
@@ -89,7 +98,7 @@ export default function () {
                 </Col>
             </Nav>
             <Carousel fade className={styles.corousel} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                     <Image
                         src={descontos}
                         width={990}
@@ -98,7 +107,7 @@ export default function () {
                         alt="First slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                     <Image
                         src={promo}
                         width={990}
@@ -107,7 +116,7 @@ export default function () {
                         alt="Two slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                     <Image
                         src={inaugura}
                         width={990}
@@ -118,71 +127,38 @@ export default function () {
                 </Carousel.Item>
             </Carousel>
 
+        {/*Masculino*/}
+
             <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
 
-                <Col sm="3">
-                    <Card body>
+            <Col sm="3">
+                    <Card body style={{ height: '650px' }}>
                         <Image src={mascOne} />
                         <br />
                         <h4>Camiseta masculina tiringa</h4>
                         <CardText>Compre agora a camiseta social que o tiringa usa diáriamente em sua fazenda.</CardText>
-                        <Button class="btn btn-warning" onClick={() => setoneShow(true)}>R$ 59,99</Button>
+                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => setoneShow(true)}>R$ 59,99</Button>
                     </Card>
                 </Col>
 
                 <Col sm="3">
-                    <Card body>
+                    <Card body style={{ height: '650px' }}>
                         <Image src={camisaTwo} />
                         <br />
                         <h4>Camiseta Unisex Tiringa Oficial</h4>
                         <CardText>Camiseta Unisex com diferentes tamanhos e diferentes cores para gostos de ambos genêros.</CardText>
-                        <Button class="btn btn-warning" onClick={() => settwoShow(true)}>R$ 39,90</Button>
+                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => settwoShow(true)}>R$ 39,90</Button>
                     </Card>
                 </Col>
 
                 <Col sm="3">
-                    <Card body>
+                    <Card body style={{ height: '650px' }}>
                         <Image src={masc} />
                         <br />
                         <h4>Terno completo estilo tiringa</h4>
                         <br />
                         <CardText>Compromisso importante? Escolha já nosso lindo terno tiringa.</CardText>
-                        <Button class="btn btn-warning" onClick={() => settreeShow(true)}>R$ 359,90</Button>
-                    </Card>
-                </Col>
-            </div>
-
-            <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
-
-                <Col sm="3">
-                    <Card body>
-                        <Image src={femin1} width={500} height={490} />
-                        <br />
-                        <h4>Promoção Feminina</h4>
-                        <CardText>Conjunto lançamento tiringa Store só para mulheres, body e calça.</CardText>
-                        <br />
-                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
-                    </Card>
-                </Col>
-
-                <Col sm="3">
-                    <Card body>
-                        <Image src={femin2} width={500} height={430} />
-                        <br />
-                        <h4>Body´s Feminino multiplas cores</h4>
-                        <CardText>Body femino com diferentes tamanhos e diferentes cores, na compra de dois 50% de desconto o segundo.</CardText>
-                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
-                    </Card>
-                </Col>
-
-                <Col sm="3">
-                    <Card body>
-                        <Image src={femin3} width={500} height={490} />
-                        <br />
-                        <h4>Macaquinho multiplas cores</h4>
-                        <br />
-                        <CardText>Macaquinho feminino Tamanho único, 12 peças variadas.</CardText>
-                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
+                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => settreeShow(true)}>R$ 359,90</Button>
                     </Card>
                 </Col>
             </div>
@@ -211,7 +187,7 @@ export default function () {
                                                 height={350}
                                                 src={socialUm}
                                                 alt="First slide" />
-                                            <h5>Compre agora a camiseta social que o <br /> tiringa usa diáriamente em sua fazenda.</h5>
+                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
@@ -220,7 +196,7 @@ export default function () {
                                                 width={420}
                                                 height={350}
                                             />
-                                            <h5>Compre agora a camiseta social que o <br /> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
+                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
                                                 src={socialTree}
@@ -228,11 +204,11 @@ export default function () {
                                                 width={420}
                                                 height={350}
                                             />
-                                            <h5>Compre agora a camiseta social que o <br /> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
+                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
                                     </Carousel>
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
                                         <Col body>
-                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                            <Button class="btn btn-warning" href='/carinho' >R$ 59,99</Button>
                                         </Col>
                                     </Col>
                                 </div>
@@ -265,7 +241,7 @@ export default function () {
                                                 height={350}
                                                 src={camisaOne}
                                                 alt="First slide" />
-                                            <h5>Camiseta Unisex com diferentes tamanhos e <br /> diferentes cores para gostos de ambos genêros.</h5>
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
@@ -274,7 +250,7 @@ export default function () {
                                                 width={420}
                                                 height={350}
                                             />
-                                            <h5>Camiseta Unisex com diferentes tamanhos e <br /> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
                                                 src={camisaTree}
@@ -282,7 +258,7 @@ export default function () {
                                                 width={420}
                                                 height={350}
                                             />
-                                            <h5>Camiseta Unisex com diferentes tamanhos e <br /> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
                                     </Carousel>
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
                                         <Col body>
@@ -343,6 +319,216 @@ export default function () {
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
                                         <Col body>
                                             <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                        </Col>
+                                    </Col>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal.Body>
+            </Modal>
+
+        {/* Feminino */}
+
+            <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
+
+                <Col sm="3">
+                    <Card body style={{ height: '650px' }}>
+                        <Image src={femOne} height={650} />
+                        <br />
+                        <h4>Short tactel feminino curtíssimo liso várias cores</h4>
+                        <CardText>SHORT TACTEL FEMININO Tecido - TACTEL Composição - 100%POLIÉSTER Tamanhos - P, M e G Produtos novos e embalados individualmente, etiquetas internas e externas. Tempo de postagem de até 24 horas em dia útil.</CardText>
+                        <Button class="btn btn-warning" style={{ marginTop: 'auto' }} onClick={() => setumShow(true)}>R$ 29,99</Button>
+                    </Card>
+                </Col>
+
+                <Col sm="3">
+                    <Card body style={{ height: '650px' }}>
+                        <Image src={femin2} height={650} />
+                        <br />
+                        <h4>SHORTS HERING JEANS CINTURA ALTA AZUL MÉDIO</h4>
+                        <CardText>Looks leves, versáteis e que combinam perfeitamente tanto com um passeio casual no final de semana quanto com uma produção de expert para odia a dia. Essencial!</CardText>
+                        <Button class="btn btn-warning" onClick={() => setdoisShow(true)} style={{ marginTop: 'auto' }}>R$ 39,90</Button>
+                    </Card>
+                </Col>
+
+                <Col sm="3">
+                    <Card body style={{ height: '650px' }}>
+                        <Image src={jeansTwo} height={799} />
+                        <br />
+                        <h4>Camiseta oficial tiringa</h4>
+                        <br />
+                        <CardText>Camiseta oficial tiringa, 100% algodão.</CardText>
+                        <Button class="btn btn-warning" onClick={() => settresShow(true)} style={{ marginTop: 'auto' }}>R$39,90</Button>
+                    </Card>
+                </Col>
+            </div>
+
+            <Modal
+                size="lg"
+                show={umShow}
+                onHide={() => setumShow(false)}
+                aria-labelledby="example-modal-sizes-title-sm"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-modal-sizes-title-sm" style={{ marginLeft: 'auto' }}>
+                        Short tactel feminino curtíssimo liso várias cores
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div>
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                width={520}
+                                                height={380}
+                                                src={femOne}
+                                                alt="First slide" />
+                                            <h5>SHORT TACTEL FEMININO Tecido - TACTEL Composição - <br />
+                                                100%POLIÉSTER.</h5>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                width={520}
+                                                height={380}
+                                                src={femTwo}
+                                                alt="First slide" />
+                                            <h5>SHORT TACTEL FEMININO Tecido - TACTEL Composição - <br />
+                                                100%POLIÉSTER.</h5>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={femTree}
+                                                alt="First slide"
+                                                width={520}
+                                                height={380}
+                                            />
+                                            <h5>SHORT TACTEL FEMININO Tecido - TACTEL Composição - <br />
+                                                100%POLIÉSTER.</h5>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 29,90</Button>
+                                        </Col>
+                                    </Col>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal.Body>
+            </Modal>
+            <Modal
+                size="lg"
+                show={doisShow}
+                onHide={() => setdoisShow(false)}
+                aria-labelledby="example-modal-sizes-title-lg"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-modal-sizes-title-lg" style={{ marginLeft: 'auto' }}>
+                        SHORTS HERING JEANS CINTURA ALTA AZUL MÉDIO
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div>
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                width={420}
+                                                height={380}
+                                                src={shortsUm}
+                                                alt="First slide" />
+                                            <h5>Conta ainda com bolsos funcionais,
+                                                passantes na cintura e barras tradicionais. <br />
+                                                O Shorts jeans de algodão com elastano tem modelagem ajustada com cintura alta!</h5>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={shortsTwo}
+                                                alt="First slide"
+                                                width={420}
+                                                height={380} />
+                                            <h5>Conta ainda com bolsos funcionais,
+                                                passantes na cintura e barras tradicionais. <br />
+                                                O Shorts jeans de algodão com elastano tem modelagem ajustada com cintura alta!</h5>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={shortsTree}
+                                                alt="First slide"
+                                                width={420}
+                                                height={380}
+                                            /><h5>Conta ainda com bolsos funcionais,
+                                                passantes na cintura e barras tradicionais. <br />
+                                                O Shorts jeans de algodão com elastano tem modelagem ajustada com cintura alta!</h5>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 59,90</Button>
+                                        </Col>
+                                    </Col>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal.Body>
+            </Modal>
+            <Modal
+                size="lg"
+                show={tresShow}
+                onHide={() => settresShow(false)}
+                aria-labelledby="example-modal-sizes-title-lg"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-modal-sizes-title-lg" style={{ marginTop: 'auto' }}>
+                        Camiseta unisex Oficial
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <div>
+                                    <Carousel fade className={styles.modalCel}>
+                                        <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
+                                            <Image className="d-block w-100"
+                                                src={jeansOne}
+                                                alt="First slide"
+                                                width={420}
+                                                height={380} />
+                                            <h5>Camiseta oficial tiringa, 100% algodão. diferentes tamanhos e cores</h5>
+                                        </Carousel.Item >
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={jeansTwo}
+                                                alt="First slide"
+                                                width={420}
+                                                height={380} />
+                                            <h5>Camiseta oficial tiringa, 100% algodão. diferentes tamanhos e cores</h5>
+                                        </Carousel.Item>
+                                        <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
+                                            <Image className="d-block w-100"
+                                                src={jeansTree}
+                                                alt="First slide"
+                                                width={420}
+                                                height={380}
+                                            />
+                                            <h5>Camiseta oficial tiringa, 100% algodão. diferentes tamanhos e cores</h5>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                    <Col sm="12" style={{ textAlign: '-webkit-center' }}>
+                                        <Col body>
+                                            <Button class="btn btn-warning" href='/carinho'>R$ 49,99</Button>
                                         </Col>
                                     </Col>
                                 </div>

@@ -59,7 +59,7 @@ export default function () {
                 </Col>
             </Nav>
             <Carousel fade className={styles.corousel} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
-                    <Carousel.Item interval={1000}>
+                    <Carousel.Item interval={2000}>
                         <Image
                             src={bemvindo}
                             width={990}
@@ -68,7 +68,7 @@ export default function () {
                             alt="First slide"
                         />
                     </Carousel.Item>
-                    <Carousel.Item interval={1000}>
+                    <Carousel.Item interval={2000}>
                         <Image
                             src={promo}
                             width={990}
@@ -77,7 +77,7 @@ export default function () {
                             alt="Two slide"
                         />
                     </Carousel.Item>
-                    <Carousel.Item interval={1000}>
+                    <Carousel.Item interval={2000}>
                         <Image
                             src={inaugura}
                             width={990}
@@ -89,19 +89,19 @@ export default function () {
                 </Carousel>
             <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
                 <Col sm="3">
-                    <Card body>
+                    <Card body style={{height: '450px'}}>
                         <Image src={feminino} width={190} height={290} />
                         <h4>Acesse a área Feminina</h4>
                         <CardText>Visite nossa área excluisiva para Mulheres empoderadas.</CardText>
-                        <Button class="btn btn-success" href="/feminino">Visite já</Button>
+                        <Button class="btn btn-success" style={{marginTop: 'auto'}} href="/feminino">Visite já</Button>
                     </Card>
                 </Col>
                 <Col sm="3">
-                    <Card body>
+                    <Card body style={{height: '450px'}}>
                         <Image src={masculino} width={190} height={290} />
                         <h4>Acesse a área Maculina</h4>
                         <CardText>Visite nossa área excluisiva para Homens fortes como o tiringa.</CardText>
-                        <Button class="btn btn-success" href="/masculino">Visite já</Button>
+                        <Button class="btn btn-success" href="/masculino" style={{marginTop: 'auto'}}>Visite já</Button>
                     </Card>
                 </Col>
             </div>

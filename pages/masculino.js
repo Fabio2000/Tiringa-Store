@@ -88,7 +88,7 @@ export default function () {
 
             <div>
                 <Carousel fade className={styles.corousel} style={{ textAlignLast: 'center', marginBottom: '100px' }}>
-                    <Carousel.Item interval={1000}>
+                    <Carousel.Item interval={2000}>
                         <Image
                             src={mas}
                             width={990}
@@ -97,7 +97,7 @@ export default function () {
                             alt="First slide"
                         />
                     </Carousel.Item>
-                    <Carousel.Item interval={1000}>
+                    <Carousel.Item interval={2000}>
                         <Image
                             src={promo}
                             width={990}
@@ -106,7 +106,7 @@ export default function () {
                             alt="Two slide"
                         />
                     </Carousel.Item>
-                    <Carousel.Item interval={1000}>
+                    <Carousel.Item interval={2000}>
                         <Image
                             src={inaugura}
                             width={990}
@@ -120,33 +120,33 @@ export default function () {
             <div class="row" style={{ justifyContent: 'center', paddingTop: '1px', paddingBottom: '20px' }} className={styles.cards}>
 
                 <Col sm="3">
-                    <Card body>
+                    <Card body style={{ height: '650px' }}>
                         <Image src={mascOne} />
                         <br />
                         <h4>Camiseta masculina tiringa</h4>
                         <CardText>Compre agora a camiseta social que o tiringa usa diáriamente em sua fazenda.</CardText>
-                        <Button class="btn btn-warning" onClick={() => setoneShow(true)}>R$ 59,99</Button>
+                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => setoneShow(true)}>R$ 59,99</Button>
                     </Card>
                 </Col>
 
                 <Col sm="3">
-                    <Card body>
+                    <Card body style={{ height: '650px' }}>
                         <Image src={camisaTwo} />
                         <br />
                         <h4>Camiseta Unisex Tiringa Oficial</h4>
                         <CardText>Camiseta Unisex com diferentes tamanhos e diferentes cores para gostos de ambos genêros.</CardText>
-                        <Button class="btn btn-warning" onClick={() => settwoShow(true)}>R$ 39,90</Button>
+                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => settwoShow(true)}>R$ 39,90</Button>
                     </Card>
                 </Col>
 
                 <Col sm="3">
-                    <Card body>
+                    <Card body style={{ height: '650px' }}>
                         <Image src={masc} />
                         <br />
                         <h4>Terno completo estilo tiringa</h4>
                         <br />
                         <CardText>Compromisso importante? Escolha já nosso lindo terno tiringa.</CardText>
-                        <Button class="btn btn-warning" onClick={() => settreeShow(true)}>R$ 359,90</Button>
+                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => settreeShow(true)}>R$ 359,90</Button>
                     </Card>
                 </Col>
             </div>
@@ -198,7 +198,7 @@ export default function () {
                                     </Carousel>
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
                                         <Col body>
-                                            <Button class="btn btn-warning" href='/carinho'>R$ 359,90</Button>
+                                            <Button class="btn btn-warning" href='/carinho' >R$ 59,99</Button>
                                         </Col>
                                     </Col>
                                 </div>
