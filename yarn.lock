@@ -755,15 +755,15 @@
   dependencies:
     "prop-types" "^15.8.1"
 
-"@next/env@12.3.2":
-  "integrity" "sha512-upwtMaHxlv/udAWGq0kE+rg8huwmcxQPsKZFhS1R5iVO323mvxEBe1YrSXe1awLbg9sTIuEHbgxjLLt7JbeuAQ=="
-  "resolved" "https://registry.npmjs.org/@next/env/-/env-12.3.2.tgz"
-  "version" "12.3.2"
+"@next/env@12.3.3":
+  "integrity" "sha512-H2pKuOasV9RgvVaWosB2rGSNeQShQpiDaF4EEjLyagIc3HwqdOw2/VAG/8Lq+adOwPv2P73O1hulTNad3k5MDw=="
+  "resolved" "https://registry.npmjs.org/@next/env/-/env-12.3.3.tgz"
+  "version" "12.3.3"
 
-"@next/swc-win32-x64-msvc@12.3.2":
-  "integrity" "sha512-tpQJYUH+TzPMIsdVl9fH8uDg47iwiNjKY+8e9da3dXqlkztKzjSw0OwSADoqh3KrifplXeKSta+BBGLdBqg3sg=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.3.2.tgz"
-  "version" "12.3.2"
+"@next/swc-win32-x64-msvc@12.3.3":
+  "integrity" "sha512-Ku9mfGwmNtk44o4B/jEWUxBAT4tJ3S7QbBMLJdL1GmtRZ05LGL36OqWjLvBPr8dFiHOQQbYoAmYfQw7zeGypYA=="
+  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.3.3.tgz"
+  "version" "12.3.3"
 
 "@popperjs/core@^2.0.0", "@popperjs/core@^2.11.5", "@popperjs/core@^2.11.6", "@popperjs/core@^2.6.0":
   "integrity" "sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw=="
@@ -1005,6 +1005,11 @@
     "@babel/runtime" "^7.8.7"
     "csstype" "^3.0.2"
 
+"dotenv@^16.0.3":
+  "integrity" "sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ=="
+  "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz"
+  "version" "16.0.3"
+
 "dottie@^2.0.2":
   "integrity" "sha512-fmrwR04lsniq/uSr8yikThDTrM7epXHBAAjH9TbeH3rEA8tdCO7mRzB9hdmdGyJCxF8KERo9CITcm3kGuoyMhg=="
   "resolved" "https://registry.npmjs.org/dottie/-/dottie-2.0.2.tgz"
@@ -1205,31 +1210,31 @@
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.3.4.tgz"
   "version" "3.3.4"
 
-"next@^12.3.2":
-  "integrity" "sha512-orzvvebCwOqaz1eA5ZA0R5dbKxqtJyw7yeig7kDspu6p8OrplfyelzpvMHcDTKscv/l0nn/0l0v3mSsE8w4k7A=="
-  "resolved" "https://registry.npmjs.org/next/-/next-12.3.2.tgz"
-  "version" "12.3.2"
+"next@^12.3.3":
+  "integrity" "sha512-Rx2Y6Wl5R8E77NOfBupp/B9OPCklqfqD0yN2+rDivhMjd6hjVFH5n0WTDI4PWwDmZsdNcYt6NV85kJ3PLR+eNQ=="
+  "resolved" "https://registry.npmjs.org/next/-/next-12.3.3.tgz"
+  "version" "12.3.3"
   dependencies:
-    "@next/env" "12.3.2"
+    "@next/env" "12.3.3"
     "@swc/helpers" "0.4.11"
     "caniuse-lite" "^1.0.30001406"
     "postcss" "8.4.14"
     "styled-jsx" "5.0.7"
     "use-sync-external-store" "1.2.0"
   optionalDependencies:
-    "@next/swc-android-arm-eabi" "12.3.2"
-    "@next/swc-android-arm64" "12.3.2"
-    "@next/swc-darwin-arm64" "12.3.2"
-    "@next/swc-darwin-x64" "12.3.2"
-    "@next/swc-freebsd-x64" "12.3.2"
-    "@next/swc-linux-arm-gnueabihf" "12.3.2"
-    "@next/swc-linux-arm64-gnu" "12.3.2"
-    "@next/swc-linux-arm64-musl" "12.3.2"
-    "@next/swc-linux-x64-gnu" "12.3.2"
-    "@next/swc-linux-x64-musl" "12.3.2"
-    "@next/swc-win32-arm64-msvc" "12.3.2"
-    "@next/swc-win32-ia32-msvc" "12.3.2"
-    "@next/swc-win32-x64-msvc" "12.3.2"
+    "@next/swc-android-arm-eabi" "12.3.3"
+    "@next/swc-android-arm64" "12.3.3"
+    "@next/swc-darwin-arm64" "12.3.3"
+    "@next/swc-darwin-x64" "12.3.3"
+    "@next/swc-freebsd-x64" "12.3.3"
+    "@next/swc-linux-arm-gnueabihf" "12.3.3"
+    "@next/swc-linux-arm64-gnu" "12.3.3"
+    "@next/swc-linux-arm64-musl" "12.3.3"
+    "@next/swc-linux-x64-gnu" "12.3.3"
+    "@next/swc-linux-x64-musl" "12.3.3"
+    "@next/swc-win32-arm64-msvc" "12.3.3"
+    "@next/swc-win32-ia32-msvc" "12.3.3"
+    "@next/swc-win32-x64-msvc" "12.3.3"
 
 "nextjs@^0.0.3":
   "integrity" "sha512-mYbDUo4/sRAZ8TqK63PCpYnFiLg7BICG/ot9+guOrUKd4/Fo71ZmEQ41IZbH6nqbQvG7SXTBuofJXAIWfNho0w=="
