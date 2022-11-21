@@ -12,4 +12,16 @@ const userSchema = new mongoose.Schema({
     }
 })
 
+const prodSchema = new mongoose.Schema({
+    produto:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    genero:{
+        type:String,
+        required:true
+    }
+})
+
 module.exports = mongoose.models.email || mongoose.model('email',userSchema)

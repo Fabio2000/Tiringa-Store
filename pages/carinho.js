@@ -7,6 +7,7 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Co
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
+import ternoUm from '../public/imagens/masculina/ternoUm.jpg'
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -63,14 +64,14 @@ export default function () {
                                 <Container>
                                     <Row>
                                         <Col style={{ display: 'flex' }}>
-                                            <Image src={cearense}
+                                            <Image src={ternoUm}
                                                 width={280}
                                                 height={200}
                                             ></Image>
                                             <Col style={{ display: 'flex' }}>
-                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Preço: </h4><h6> ####</h6>
-                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Tamanho: </h4><h6> ####</h6>
-                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Cor: </h4><h6> ####</h6>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Preço: 359,90</h4>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Tamanho: Unico</h4>
+                                                <h4 style={{ marginLeft: '20px', marginRight: '20px' }}>Cor: Preto</h4>
                                             </Col>
                                         </Col>
                                     </Row>
@@ -80,7 +81,7 @@ export default function () {
                     </Col>
                 </Row>
                 <Form style={{ textAlignLast: 'center', marginTop: '100px' }}>
-                    <Button variant="success">Finalizar compra</Button>
+                    <Button variant="success" href='https://mpago.la/1zqgavF'>Finalizar compra</Button>
                 </Form>
                 <footer className={styles.footer}>
                     <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
