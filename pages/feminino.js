@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from 'react-bootstrap/Carousel';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dropdown, DropdownToggle, Form, DropdownMenu, DropdownItem, Nav, Col, Card, Row, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, Row, CardText, Container } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
