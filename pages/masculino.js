@@ -69,6 +69,10 @@ export default function () {
                                     <li class="nav-item">
                                         <a class="nav-link" href="/criadores">Criadores</a>
                                     </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/json">JSON</a>
+                                    </li>
                                 </ul>
                             </Col>
                         </Container>
@@ -78,6 +82,7 @@ export default function () {
                     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                         <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
                         <DropdownMenu>
+                            <DropdownItem href='/login'>Login</DropdownItem>
                             <DropdownItem href='/perfil'>Perfil</DropdownItem>
                             <DropdownItem href='/carinho'>Carinho</DropdownItem>
                             <DropdownItem href='/historico'>Histórico</DropdownItem>
@@ -125,7 +130,7 @@ export default function () {
                         <br />
                         <h4>Camiseta masculina tiringa</h4>
                         <CardText>Compre agora a camiseta social que o tiringa usa diáriamente em sua fazenda.</CardText>
-                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => setoneShow(true)}>R$ 59,99</Button>
+                        <Button class="btn btn-warning" style={{ marginTop: 'auto' }} onClick={() => setoneShow(true)}>R$ 59,99</Button>
                     </Card>
                 </Col>
 
@@ -135,7 +140,7 @@ export default function () {
                         <br />
                         <h4>Camiseta Unisex Tiringa Oficial</h4>
                         <CardText>Camiseta Unisex com diferentes tamanhos e diferentes cores para gostos de ambos genêros.</CardText>
-                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => settwoShow(true)}>R$ 39,90</Button>
+                        <Button class="btn btn-warning" style={{ marginTop: 'auto' }} onClick={() => settwoShow(true)}>R$ 39,90</Button>
                     </Card>
                 </Col>
 
@@ -146,7 +151,7 @@ export default function () {
                         <h4>Terno completo estilo tiringa</h4>
                         <br />
                         <CardText>Compromisso importante? Escolha já nosso lindo terno tiringa.</CardText>
-                        <Button class="btn btn-warning" style={{marginTop: 'auto'}} onClick={() => settreeShow(true)}>R$ 359,90</Button>
+                        <Button class="btn btn-warning" style={{ marginTop: 'auto' }} onClick={() => settreeShow(true)}>R$ 359,90</Button>
                     </Card>
                 </Col>
             </div>
@@ -177,7 +182,7 @@ export default function () {
                                                 height={350}
                                                 src={socialUm}
                                                 alt="First slide" />
-                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>
+                                            <h5>Compre agora a camiseta social que o <br /> tiringa usa diáriamente em sua fazenda.</h5>
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
@@ -186,7 +191,7 @@ export default function () {
                                                 width={420}
                                                 height={350}
                                             />
-                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
+                                            <h5>Compre agora a camiseta social que o <br /> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
                                                 src={socialTree}
@@ -194,7 +199,7 @@ export default function () {
                                                 width={420}
                                                 height={350}
                                             />
-                                            <h5>Compre agora a camiseta social que o <br/> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
+                                            <h5>Compre agora a camiseta social que o <br /> tiringa usa diáriamente em sua fazenda.</h5>                                        </Carousel.Item>
                                     </Carousel>
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
                                         <Col body>
@@ -231,7 +236,7 @@ export default function () {
                                                 height={350}
                                                 src={camisaOne}
                                                 alt="First slide" />
-                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br /> diferentes cores para gostos de ambos genêros.</h5>
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
@@ -240,7 +245,7 @@ export default function () {
                                                 width={420}
                                                 height={350}
                                             />
-                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br /> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
                                                 src={camisaTree}
@@ -248,7 +253,7 @@ export default function () {
                                                 width={420}
                                                 height={350}
                                             />
-                                            <h5>Camiseta Unisex com diferentes tamanhos e <br/> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
+                                            <h5>Camiseta Unisex com diferentes tamanhos e <br /> diferentes cores para gostos de ambos genêros.</h5>                                        </Carousel.Item>
                                     </Carousel>
                                     <Col sm="12" style={{ textAlign: '-webkit-center' }}>
                                         <Col body>
@@ -317,7 +322,7 @@ export default function () {
                     </Container>
                 </Modal.Body>
             </Modal>
-            
+
             <footer className={styles.footer}>
                 <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
             </footer>

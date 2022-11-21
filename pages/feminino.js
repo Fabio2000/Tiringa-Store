@@ -71,6 +71,10 @@ export default function () {
                                     <li class="nav-item">
                                         <a class="nav-link" href="/criadores">Criadores</a>
                                     </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/json">JSON</a>
+                                    </li>
                                 </ul>
                             </Col>
                         </Container>

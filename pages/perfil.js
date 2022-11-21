@@ -1,17 +1,11 @@
 import styles from '../style/styles.module.css'
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Card, Form, Input, CardText, CardTitle, Container } from 'reactstrap';
+import { Button, Form, FormGroup, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Label, FormText, Container, Input } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
-import promo from '../public/imagens/promocao.png'
-import bemvindo from '../public/imagens/bemvindo.jpg'
-import inaugura from '../public/imagens/inaugura.jpeg'
-import feminino from '../public/imagens/feminino.jpeg'
-import masculino from '../public/imagens/masculino.jpeg'
 import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
 import { disconnect, version } from 'mongoose';
 
@@ -23,7 +17,7 @@ export default function () {
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
   return (
-    <Col className={styles.teste}>
+    <Col className={styles.body}>
       <Nav className="navbar navbar-expand navbar-dark bg-dark col-12" style={{ marginBottom: '50px' }}>
         <div id="informa" className={styles.informa}>
           <div>
@@ -42,6 +36,10 @@ export default function () {
                   <li class="nav-item">
                     <a class="nav-link" href="/criadores">Criadores</a>
                   </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/json">JSON</a>
+                  </li>
                 </ul>
               </Col>
             </Container>
@@ -51,6 +49,7 @@ export default function () {
           <Dropdown isOpen={dropdownOpen} toggle={toggle}>
             <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
             <DropdownMenu>
+              <DropdownItem href='/login'>Login</DropdownItem>
               <DropdownItem href='/perfil'>Perfil</DropdownItem>
               <DropdownItem href='/carinho'>Carinho</DropdownItem>
               <DropdownItem href='/historico'>Histórico</DropdownItem>
@@ -58,93 +57,66 @@ export default function () {
           </Dropdown>
         </Col>
       </Nav>
-      <form
-        className="mx-auto max-w-screen-md">
-        <h1 className="mb-4 text-xl">Atualize o perfil</h1>
+      <Row className={styles.boxDegrade} style={{ textAlign: '-webkit-center', textAlignLast: 'start' }}>
+        <Container>
+          <Col xs="12" sm="6" style={{ bordertop: 'groov' }}>
+            <Form>
+              <FormGroup>
+                <Label for="email"><h3>Email</h3></Label>
+                <Input type="email" name="email" id="email" placeholder="Digite seu email" />
+              </FormGroup>
 
-        <div className="mb-4">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            className="w-full"
-            id="name"
-            autoFocus
-          // {...register('name', {
-          //   required: 'Please enter name',
-          // })}
-          />
-          {/* {errors.name && (
-            <div className="text-red-500">{errors.name.message}</div>
-          )} */}
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            className="w-full"
-            id="email"
-          // {...register('email', {
-          //   required: 'Please enter email',
-          //   pattern: {
-          //     value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
-          //     message: 'Please enter valid email',
-          //   },
-          // })}
-          />
-          {/* {errors.email && (
-            <div className="text-red-500">{errors.email.message}</div>
-          )} */}
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="password">Password</label>
-          <input
-            className="w-full"
-            type="password"
-            id="password"
-          // {...register('password', {
-          //   minLength: { value: 6, message: 'password is more than 5 chars' },
-          // })}
-          />
-          {/* {errors.password && (
-            <div className="text-red-500 ">{errors.password.message}</div>
-          )} */}
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="confirmPassword">Confirm Password</label>
-          <input
-            className="w-full"
-            type="password"
-            id="confirmPassword"
-          // {...register('confirmPassword', {
-          //   validate: (value) => value === getValues('password'),
-          //   minLength: {
-          //     value: 6,
-          //     message: 'confirm password is more than 5 chars',
-          //   },
-          // })}
-          />
-          {/* {errors.confirmPassword && (
-            <div className="text-red-500 ">
-              {errors.confirmPassword.message}
-            </div>
-          )}
-          {errors.confirmPassword &&
-            errors.confirmPassword.type === 'validate' && (
-              <div className="text-red-500 ">Password do not match</div>
-            )} */}
-        </div>
-        <div className="mb-4">
-          <button className="primary-button">Update Profile</button>
-        </div>
-      </form>
-
+              <FormGroup>
+                <Label for="nome"><h3>Nome Completo</h3></Label>
+                <Input type="text" name="nome" id="nome" placeholder="Digite seu Nome Completo" />
+              </FormGroup>
+              
+              <FormGroup>
+                <Label for="endereco"><h3>Endereço</h3></Label>
+                <Input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" />
+              </FormGroup>
+              
+              <FormGroup>
+                <Label for="numero"><h3>Numero</h3></Label>
+                <Input type="number" name="numero" id="numero" placeholder="Digite o numero" />
+              </FormGroup>
+              
+              <FormGroup>
+                <Label for="complemento"><h3>Complemento</h3></Label>
+                <Input type="text" name="complemento" id="complemento" placeholder="Digite digte o complemento caso tenha" />
+              </FormGroup>
+              
+              <FormGroup>
+                <Label for="cep"><h3>CEP</h3></Label>
+                <Input type="number" name="cep" id="cep" placeholder="Digite seu cep" />
+              </FormGroup>
+              
+              <FormGroup>
+                <Label for="cpf"><h3>CPF</h3></Label>
+                <Input type="number" name="cpf" id="cpf" placeholder="Digite seu email" />
+              </FormGroup>
+              <FormGroup>
+                <Label for="exampleFile"><h3>RG FRENTE E VERSO</h3></Label>
+                <Input type="file" name="file" id="exampleFile" />
+                <FormText color="muted">
+                  Informações totalmente essenciais para seguraça da empresa e do usuário. aceite nossas politicas de negocios.
+                </FormText>
+              </FormGroup>
+              <FormGroup check>
+                <Label check>
+                  <Input type="checkbox" />{' '}
+                  Aceito
+                </Label>
+              </FormGroup>
+              <br />
+              <Button class="btn btn-success" style={{width: '400px', textAlignLast: 'auto', display: 'table'}}>Enviar</Button>
+            </Form>
+          </Col>
+        </Container>
+      </Row>
       <footer className={styles.footer}>
-                <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
-            </footer>
+        <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
+      </footer>
     </Col>
-
   )
 }

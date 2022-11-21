@@ -1,13 +1,20 @@
-import connect from "../../lib/mongodb";
-import User from '../../model/schema'
+import clientPromise from "../../lib/auth";
 
-connect()
 
-export default async function handler(req,res){
+export default async (req, res) => {
+   try {
+       const client = await clientPromise;
+       const db = client.db("test");
 
-    const {email,password}=req.body
-    const user = await User.findOne({email,password})
-    if(!user){
-         return res.json({status: 'Seu email' & email & 'Sua senha' & password})
-        }
-}
+       const emails = await db
+           .collection("emails")
+           .find({})
+           .sort({ metacritic: -1 })
+           .limit(10)
+           .toArray();
+
+       res.json(emails);
+   } catch (e) {
+       console.error(e);
+   }
+};

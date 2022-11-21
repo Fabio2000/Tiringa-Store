@@ -42,6 +42,10 @@ export default function () {
                                     <li class="nav-item">
                                         <a class="nav-link" href="/criadores">Criadores</a>
                                     </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/json">JSON</a>
+                                    </li>
                                 </ul>
                             </Col>
                         </Container>
@@ -51,6 +55,7 @@ export default function () {
                     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                         <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
                         <DropdownMenu>
+                            <DropdownItem href='/login'>Login</DropdownItem>
                             <DropdownItem href='/perfil'>Perfil</DropdownItem>
                             <DropdownItem href='/carinho'>Carinho</DropdownItem>
                             <DropdownItem href='/historico'>Histórico</DropdownItem>
@@ -99,7 +104,7 @@ export default function () {
                         </Table>
 
                         <Table dark>
-                            <thead style={{textAlignLast: 'center'}}>
+                            <thead style={{ textAlignLast: 'center' }}>
                                 <tr>
                                     <th>CNPJ: 43.489.523/0001-56</th>
                                     <th>Fone de contato: +55 11 948943850</th>

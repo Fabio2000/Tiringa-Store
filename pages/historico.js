@@ -36,6 +36,10 @@ export default function () {
                                     <li class="nav-item">
                                         <a class="nav-link" href="/criadores">Criadores</a>
                                     </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/json">JSON</a>
+                                    </li>
                                 </ul>
                             </Col>
                         </Container>
@@ -45,6 +49,7 @@ export default function () {
                     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                         <DropdownToggle style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} ><Image src={person} width={50} height={50} /></DropdownToggle>
                         <DropdownMenu>
+                            <DropdownItem href='/login'>Login</DropdownItem>
                             <DropdownItem href='/perfil'>Perfil</DropdownItem>
                             <DropdownItem href='/carinho'>Carinho</DropdownItem>
                             <DropdownItem href='/historico'>Histórico</DropdownItem>
@@ -106,14 +111,14 @@ export default function () {
                                             </Col>
                                         </Col>
                                         <Card border="light" style={{ width: '18rem' }}>
-                                                <Card.Header>Descrição do Item/Pedio</Card.Header>
-                                                <Card.Body>
-                                                    <Card.Title>Item Roupa #Item02</Card.Title>
-                                                    <Card.Text>
-                                                        Descrição da roupa #Item02, informação vinda do banco.
-                                                    </Card.Text>
-                                                </Card.Body>
-                                            </Card>
+                                            <Card.Header>Descrição do Item/Pedio</Card.Header>
+                                            <Card.Body>
+                                                <Card.Title>Item Roupa #Item02</Card.Title>
+                                                <Card.Text>
+                                                    Descrição da roupa #Item02, informação vinda do banco.
+                                                </Card.Text>
+                                            </Card.Body>
+                                        </Card>
                                     </Row>
                                 </Container>
                             </Card.Body>
@@ -152,7 +157,7 @@ export default function () {
                     </Col>
                 </Row>
             </Container>
-            
+
             <footer className={styles.footer}>
                 <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
             </footer>
