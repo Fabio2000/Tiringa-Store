@@ -24,7 +24,7 @@ export default function () {
 
     return (
         <Col className={styles.body}>
-            <Nav className="navbar navbar-expand navbar-dark bg-dark col-12"style={{marginBottom:'50px'}}>
+            <Nav className="navbar navbar-expand navbar-dark bg-dark col-12" style={{ marginBottom: '50px' }}>
                 <div id="informa" className={styles.informa}>
                     <div>
                         <a className="navbar-brand" href="/"><Image src={cearense} width={60} height={60} /></a>
@@ -97,9 +97,22 @@ export default function () {
                                 </tr>
                             </tbody>
                         </Table>
+
+                        <Table dark>
+                            <thead style={{textAlignLast: 'center'}}>
+                                <tr>
+                                    <th>CNPJ: 43.489.523/0001-56</th>
+                                    <th>Fone de contato: +55 11 948943850</th>
+                                </tr>
+                            </thead>
+                        </Table>
+
                     </Col>
                 </Container>
             </Row>
+            <footer className={styles.footer}>
+                <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
+            </footer>
         </Col>
     )
 }

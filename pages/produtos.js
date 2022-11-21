@@ -538,6 +538,9 @@ export default function () {
                 </Modal.Body>
             </Modal>
 
+            <footer className={styles.footer}>
+                <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
+            </footer>
         </Col>
     )
 }

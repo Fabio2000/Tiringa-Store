@@ -82,6 +82,9 @@ export default function () {
                 <Form style={{ textAlignLast: 'center', marginTop: '100px' }}>
                     <Button variant="success">Finalizar compra</Button>
                 </Form>
+                <footer className={styles.footer}>
+                    <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
+                </footer>
             </Container>
         </div>
     )

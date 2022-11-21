@@ -137,7 +137,7 @@ export default function () {
                         <br />
                         <h4>SHORTS HERING JEANS CINTURA ALTA AZUL MÉDIO</h4>
                         <CardText>Looks leves, versáteis e que combinam perfeitamente tanto com um passeio casual no final de semana quanto com uma produção de expert para odia a dia. Essencial!</CardText>
-                        <Button class="btn btn-warning" onClick={() => setdoisShow(true)} style={{marginTop: 'auto'}}>R$ 39,90</Button>
+                        <Button class="btn btn-warning" onClick={() => setdoisShow(true)} style={{ marginTop: 'auto' }}>R$ 39,90</Button>
                     </Card>
                 </Col>
 
@@ -148,7 +148,7 @@ export default function () {
                         <h4>Camiseta oficial tiringa</h4>
                         <br />
                         <CardText>Camiseta oficial tiringa, 100% algodão.</CardText>
-                        <Button class="btn btn-warning" onClick={() => settresShow(true)} style={{marginTop: 'auto'}}>R$39,90</Button>
+                        <Button class="btn btn-warning" onClick={() => settresShow(true)} style={{ marginTop: 'auto' }}>R$39,90</Button>
                     </Card>
                 </Col>
             </div>
@@ -279,7 +279,7 @@ export default function () {
                 centered
             >
                 <Modal.Header closeButton>
-                    <Modal.Title id="example-modal-sizes-title-lg" style={{marginTop: 'auto'}}>
+                    <Modal.Title id="example-modal-sizes-title-lg" style={{ marginTop: 'auto' }}>
                         Camiseta unisex Oficial
                     </Modal.Title>
                 </Modal.Header>
@@ -292,18 +292,18 @@ export default function () {
                                         <Carousel.Item style={{ textAlign: `-webkit-center` }} interval={2000}>
                                             <Image className="d-block w-100"
                                                 src={jeansOne}
-                                                alt="First slide" 
+                                                alt="First slide"
                                                 width={420}
-                                                height={380}/>
-                                                <h5>Camiseta oficial tiringa, 100% algodão. diferentes tamanhos e cores</h5>
+                                                height={380} />
+                                            <h5>Camiseta oficial tiringa, 100% algodão. diferentes tamanhos e cores</h5>
                                         </Carousel.Item >
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
                                                 src={jeansTwo}
-                                                alt="First slide" 
+                                                alt="First slide"
                                                 width={420}
-                                                height={380}/>
-                                                <h5>Camiseta oficial tiringa, 100% algodão. diferentes tamanhos e cores</h5>
+                                                height={380} />
+                                            <h5>Camiseta oficial tiringa, 100% algodão. diferentes tamanhos e cores</h5>
                                         </Carousel.Item>
                                         <Carousel.Item interval={2000} style={{ textAlign: `-webkit-center` }}>
                                             <Image className="d-block w-100"
@@ -327,6 +327,9 @@ export default function () {
                 </Modal.Body>
             </Modal>
 
+            <footer className={styles.footer}>
+                <p>©Copyright 2022 by Tiringa <a href='/criadores'>Group</a>.  All rights reversed.</p>
+            </footer>
         </Col>
     )
 }

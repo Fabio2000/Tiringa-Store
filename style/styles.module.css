@@ -65,6 +65,11 @@
   margin-bottom: 30px;
 }
 
+.footer{
+  text-align: center;
+  padding-top: 100px;
+}
+
 .modalCel{
   padding: 50px;
   border-style:outset;
