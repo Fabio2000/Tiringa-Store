@@ -1,13 +1,11 @@
 import styles from '../style/styles.module.css'
-import React, { Component } from 'react';
+import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, FormGroup, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Label, FormText, Container, Input } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
-import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
-import { disconnect, version } from 'mongoose';
 
 
 

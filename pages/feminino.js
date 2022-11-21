@@ -1,5 +1,5 @@
 import styles from '../style/styles.module.css'
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -10,9 +10,6 @@ import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
 import promo from '../public/imagens/promocao.png'
 import inaugura from '../public/imagens/inaugura.jpeg'
-import mas from '../public/imagens/masculina/mas.png'
-import masc from '../public/imagens/masculina/ternoUm.jpg'
-import mascOne from '../public/imagens/masculina/socialUm.jpeg'
 
 
 // Fotos
@@ -37,9 +34,7 @@ import Modal from 'react-bootstrap/Modal';
 
 import fem from '../public/imagens/feminina/fem.png'
 
-import femin1 from '../public/imagens/femininoTiringa.png'
 import femin2 from '../public/imagens/fTiringa.png'
-import femin3 from '../public/imagens/fTiringa1.PNG'
 
 
 export default function () {

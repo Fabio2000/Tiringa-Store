@@ -1,10 +1,10 @@
 import styles from '../style/styles.module.css'
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from 'react-bootstrap/Carousel';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, Row, Input, CardText, ModalHeader, ModalBody, Container } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, Row, CardText, Container } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
@@ -24,7 +24,6 @@ import socialUm from '../public/imagens/masculina/socialUm.jpeg'
 import socialTwo from '../public/imagens/masculina/socialTwo.png'
 import socialTree from '../public/imagens/masculina/socialTree.png'
 
-import ternoOne from '../public/imagens/masculina/ternoOne.png'
 import ternoTwo from '../public/imagens/masculina/ternoTwo.PNG'
 import ternoTree from '../public/imagens/masculina/ternoTree.png'
 

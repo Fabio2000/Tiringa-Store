@@ -1,9 +1,9 @@
 import styles from '../style/styles.module.css'
-import React, { Component } from 'react';
+import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, Input, CardText, Container } from 'reactstrap';
+import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Card, CardText, Container } from 'reactstrap';
 import Image from 'next/image'
 import cearense from '../public/imagens/cearense.png';
 import person from '../public/imagens/person.png';
@@ -12,8 +12,6 @@ import bemvindo from '../public/imagens/bemvindo.jpg'
 import inaugura from '../public/imagens/inaugura.jpeg'
 import feminino from '../public/imagens/feminino.jpeg'
 import masculino from '../public/imagens/masculino.jpeg'
-import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
-import { disconnect, version } from 'mongoose';
 
 
 

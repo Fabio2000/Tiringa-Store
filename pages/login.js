@@ -4,7 +4,7 @@ import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row,
 import Image from 'next/image'
 import tiringalogin from '../public/imagens/Tiringa.png';
 import cearense from '../public/imagens/cearense.png';
-import React, { Component } from 'react';
+import React from 'react';
 import person from '../public/imagens/person.png';
 
 

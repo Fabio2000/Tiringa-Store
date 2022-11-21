@@ -1,6 +1,5 @@
 import styles from '../style/styles.module.css'
-import React, { Component } from 'react';
-import Head from 'next/head'
+import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Container, Form } from 'reactstrap';

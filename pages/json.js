@@ -1,10 +1,10 @@
 import styles from '../style/styles.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Row, Col, Card, Form, Input, CardText, CardTitle, Container } from 'reactstrap';
+import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Nav, Col, Form, Container } from 'reactstrap';
 import Image from 'next/image'
 import tiringalogin from '../public/imagens/Tiringa.png';
 import cearense from '../public/imagens/cearense.png';
-import React, { Component } from 'react';
+import React from 'react';
 import person from '../public/imagens/person.png';
 
 
