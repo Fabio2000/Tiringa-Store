@@ -81,17 +81,17 @@ export default function () {
               
               <FormGroup>
                 <Label for="complemento"><h3>Complemento</h3></Label>
-                <Input type="text" name="complemento" id="complemento" placeholder="Digite digte o complemento caso tenha" />
+                <Input type="text" name="complemento" id="complemento" placeholder="Digite o complemento caso tenha" />
               </FormGroup>
               
               <FormGroup>
                 <Label for="cep"><h3>CEP</h3></Label>
-                <Input type="number" name="cep" id="cep" placeholder="Digite seu cep" />
+                <Input type="number" name="cep" id="cep" placeholder="Digite seu CEP" />
               </FormGroup>
               
               <FormGroup>
                 <Label for="cpf"><h3>CPF</h3></Label>
-                <Input type="number" name="cpf" id="cpf" placeholder="Digite seu email" />
+                <Input type="number" name="cpf" id="cpf" placeholder="Digite seu CPF" />
               </FormGroup>
               <FormGroup>
                 <Label for="exampleFile"><h3>RG FRENTE E VERSO</h3></Label>
